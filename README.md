@@ -18,6 +18,7 @@ The aim of KolaFit is to improve the creditworthiness of blue-collar workers so 
 We decided to build a platform that enables us to collect the users’ information through an SMS. We store that data and calculate their loan eligibility. 
 This will enable the lenders to use an API to tap into our system and get the data.
 
-Our Users
+#Our Users
+
 Blue-collar workers and Financial Institutions.
 
