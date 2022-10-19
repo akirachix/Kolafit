@@ -24,7 +24,7 @@ h2{
     margin-left: 19%;
 }
 .account span{
-    color: #4285F4;
+    color: #6A7DE1;
 }
 label h5{
     width: 10%;
@@ -53,7 +53,7 @@ label h5{
 .names{
 padding-left: 23.9%;}
 .signup{
-    color: #425BDC;
+    color: #6A7DE1;
 }
 .container{
     /* margin-left: 56%; */
@@ -66,6 +66,9 @@ padding-left: 23.9%;}
     border-radius: 13px;
     }
 .password{
+    margin-top: 3%;
+}
+.gender{
     margin-top: 3%;
 }
 .email {
@@ -81,7 +84,7 @@ button{
     height: 33px;
     margin-top: 5%;
     width: 310px;
-    background-color: #425BDC;
+    background-color: #6A7DE1;
     height: 37px;
     border: none;
     border-radius: 50px;

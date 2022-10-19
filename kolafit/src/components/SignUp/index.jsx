@@ -1,7 +1,7 @@
 import React from 'react';
-import './Signup.css'
+import "../SignUp/styles.css"
 import { useState } from 'react';
-import './App'
+import axios from 'axios'; 
 
 
 const Signup = () => {
@@ -9,11 +9,12 @@ const Signup = () => {
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
     const [full_name, setFullName] = useState("");
-    // const navigate = useNavigate();
+    const [gender, setGender] = useState("");
+
 
     const submitting = (event) => {
         event.preventDefault()
-        const user = {full_name, password, email }
+        const user = {full_name, gender,password, email }
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
         const requestOptions = {
@@ -22,19 +23,20 @@ const Signup = () => {
             body: JSON.stringify(
                 user
             ),
-            redirect: 'follow'
+            redirect: 'login'
         };
-        fetch("http://127.0.0.1:8000/user/", requestOptions)
-            .then(response => response.text())
-            .then(result => console.log(result))
-            .catch(error => console.log('error', error));
+       
     }
+
+   
+        axios   
+          .get("http://localhost:8000/api/tasks/")
+          .then(res => this.setState({ taskList: res.data }))
+          .catch(err => console.log(err));
+    
     return (
         <div className="body">
-            {/* <div>
-                <img src='Images/Signup.png' />
-            </div> */}
-            <div>
+           
                 <h2 className='signup'>Sign Up</h2>
                 <form onSubmit={submitting}>
                     <label>
@@ -49,6 +51,16 @@ const Signup = () => {
                                 }}
                             ></input></div>
 
+                        <div className="gender">
+                            <input className="container"
+                                type="text"
+                                placeholder="Gender"
+                                value={gender}
+                                onChange={(e) => {
+                                    setGender(e.target.value)
+                                }}
+                            ></input></div>
+
                         <div className="email">
                             <input className="container"
                                 type="text"
@@ -57,6 +69,7 @@ const Signup = () => {
                                 onChange={(e) => {
                                     setEmail(e.target.value);
                                 }
+                                
                                 }
                             ></input></div>
                         <div className="password">
@@ -68,6 +81,7 @@ const Signup = () => {
                                 onChange={(e) => {
                                     setPassword(e.target.value);
                                 }
+                                
                                 }
                             ></input><br></br></div>
                         <div className="confirm_password">
@@ -82,13 +96,18 @@ const Signup = () => {
                                 }
                             ></input><br></br></div>
                     </label>
+
                     <button className="button" type='submit' >SignUp</button>
                 </form>
                 <p className="account">Have an account?
-                    <a href="/Login"><span>   Login   </span> </a> </p>
+                    <a href="/Login"><span >   Login   </span> </a> </p>
 
-            </div>    
-        </div>
+            </div>  
+
+           
+
+       
     )
+    
 };
 export default Signup;
