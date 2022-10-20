@@ -1,15 +1,20 @@
 import "./App.css";
-import Signup from "./components/SignUp";
+// import Signup from "./components/SignUp";
+import Details from "./components/Details";
+import Loan from "./components/Loan";
+import LandingPage from "./components/Home/Landingpage";
 
-// import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
-  return (
-    <div className="App">
-      
-<Signup/>        
-    </div>
-  );
+ <BrowserRouter>
+ <Routes>
+ <Route path="/home" element={ <LandingPage/> }/>
+ <Route path= "/details" element= {<Details/>}/>
+ <Route path= "/loans" element= {<Loan/>}/>
+ <Route />
+ </Routes>
+ </BrowserRouter>
 }
 
 export default App;
