@@ -1,0 +1,89 @@
+body{
+    align-items: center;
+    padding: 5%;
+    
+}
+
+h1{
+    align-items: center;
+    margin-top: 4%;
+}
+h2{
+    align-items: center;
+    margin-top: 4%;
+}
+
+.container{
+    /* margin-left: 56%; */
+    height: 30px;
+    width: 400px;
+    padding-left: 5px;
+    border-color: #728dd7 ;
+    border: none;
+    border: 2px #728dd7 solid;
+    border-radius: 7px;
+    }
+.Upload{
+    margin-top: 3%;
+}
+.Id {
+    margin-top: 3%;
+}
+.Upload h5{
+    margin-bottom: 0.5%;
+}
+.Front{
+    margin-top: 3%;
+    /* width: 150px; */
+}
+.containerI{
+    /* margin-left: 56%; */
+    height: 30px;
+    width: 150px;
+    padding-left: 5px;
+    border-color: #728dd7 ;
+    border: none;
+    border: 2px #728dd7 solid;
+    border-radius: 7px;
+    margin-right: 22%;
+    }
+.Back{
+    margin-top: -5%;
+    /* width: 150px; */
+}
+
+.containerII{
+    /* margin-left: 56%; */
+    height: 30px;
+    width: 150px;
+    padding-left: 5px;
+    border-color: #728dd7 ;
+    border: none;
+    border: 2px #728dd7 solid;
+    border-radius: 7px;
+    margin-left: 21%;
+    }
+.back{
+    height: 33px;
+    margin-top: 5%;
+    width: 150px;
+    background-color: #425BDC;
+    height: 37px;
+    border: none;
+    border-radius: 7px;
+    color: #FFFFFF;
+    font-size: 15px;
+}
+.proceed{
+    height: 33px;
+    margin-top:5%;
+    margin-left: 9%;
+    width: 150px;
+    background-color: #425BDC;
+    height: 37px;
+    border: none;
+    border-radius:7px;
+    color: #FFFFFF;
+    font-size: 15px;
+    
+}
