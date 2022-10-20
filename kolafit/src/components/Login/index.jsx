@@ -59,13 +59,9 @@ const Login = () => {
                             </div>
                         </div>
                     </label>
+                    <Link to='/home' >
                     <button className="button" type='submit' >Login</button>
-
-                    {/* <button className="button">
-                        <Link to= "/login" >
-                            Login
-                        </Link>
-                    </button> */}
+                    </Link>
                 </form>
                 <p className="account">Don't have an account?
                     <span >  <Link to="/signup">Signup</Link>  </span> 
