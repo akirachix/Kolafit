@@ -1,8 +1,11 @@
 import React from 'react';
 import "../SignUp/styles.css"
 import { useState } from 'react';
-import axios from 'axios'; 
 import kola from "../Kola.png"
+import {Link} from "react-router-dom";
+
+
+
 
 
 
@@ -93,12 +96,15 @@ const submitting = (event) => {
                                 }
                             ></input><br></br></div>
                     </label>
+                    <Link to='/home' >
                     <button className="button" type='submit' >SignUp</button>
+                    </Link>
+                    <p className="account">Don't have an account?
+                    <a href="/Login"><span> Login </span> </a> </p>
                 </form>
-                <p className="account">Have an account?
-                    <a href="/Login"><span >   Login   </span> </a> </p>
+               
             </div>
-        </div>
+     </div>
     
   )}
     

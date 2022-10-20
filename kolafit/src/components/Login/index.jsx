@@ -17,13 +17,11 @@ const Login = () => {
         console.log(JSON.stringify(data));
     };
 
-    const navigateHome = () => {
-        // navigate("/home");
-    };
+   
     return (
         <div className="login">
             <div className="image">
-                <img src={kola} alt="login" width="500" height="500"></img>
+                <img src={kola} alt="login" width="400" height="500"></img>
             </div>
 
 
@@ -61,14 +59,9 @@ const Login = () => {
                             </div>
                         </div>
                     </label>
-                    {/* <button className="button" onClick={navigateHome}>
-                        Login
-                    </button> */}
-                    <button className="button">
-                        <Link to= "/login" >
-                            Login
-                        </Link>
-                    </button>
+                    <Link to='/home' >
+                    <button className="button" type='submit' >Login</button>
+                    </Link>
                 </form>
                 <p className="account">Don't have an account?
                     <span >  <Link to="/signup">Signup</Link>  </span> 
