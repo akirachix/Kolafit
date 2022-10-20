@@ -1,0 +1,57 @@
+.About{ 
+    display: flex; 
+
+}   
+.Text{ 
+    margin-top: 8%; 
+    margin-left: 10%;  
+    
+}
+.Text h3{ 
+    color: #4460DC; 
+    font-size: 150%; 
+}  
+.App{ 
+    align-items: center;
+} 
+.btn{ 
+    color: #FFFFFF;
+    background-color: #425BDC;
+    width: 100px;
+    height: 33px; 
+    transition: all 0.5s;
+    cursor: pointer; 
+    vertical-align: middle; 
+    border-radius: 50px; 
+    border: none; 
+    font-size: 15px; 
+}  
+.btn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .btn span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .btn:hover span {
+    padding-right: 25px;
+  }
+  
+  .btn:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+.picture img{ 
+    width: 90%;   
+    margin-top: 15%;
+} 
+ 
