@@ -1,0 +1,35 @@
+.service-navigation{
+    display: flex;
+    color: blue;
+    background-color: white;
+    /* margin-left: 10%; */
+}
+.btn{
+    border: solid 2px blue;
+    background-color: white;
+    color: blue;
+    text-decoration: none;
+    padding: 10px;
+}
+.main-button{
+    background-color: white;
+    padding: 10px;
+    margin-left: 10%;
+    /* width: 60%; */
+   
+}
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 50%;
+    margin-top:5%;
+}
+ .btn-acc {
+    width: 60%;
+}
+.btn-edu{
+  border-width: 60%;
+  border-radius: 3px;
+}
