@@ -7,14 +7,14 @@ h2{
     color: #6A7DE1;
 }
 .container{
-    height: 30px;
-    width: 400px;
+    height: 10px;
+    width: 200px;
     padding-left: 5px;
-    padding-bottom: 3%;
-    border-color: #728dd7 ;
+    padding-bottom: 1%;
+    border-color: #a0b4ec ;
     border: none;
-    border: 2px #728dd7 solid;
-    border-radius: 13px;
+    border: 2px #b7c7f3 solid;
+    border-radius: 9px;
     }
 .password{
     margin-top: 3%;
@@ -42,22 +42,44 @@ button{
 }
 
 .main{
-    background-color: blue;
-    margin-top: 1%;
-    margin-left: 17%;
+    background-color: #6A7DE1;
+    margin-top: 3%;
+    margin-left: 5%;
     margin-bottom: 2%;
-    
+    width: 600px;
+    height: 480px;
+    border-radius: 14px 0px 0px 14px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+    /* border-radius:30px; */
 }
-.signUp{
-    display: flex;
-    margin-top: 25px;
-    margin-left: 70px;
-    width: 90%;
-    border-radius: 20px;
+.main-container{
+    background-color:white;
+    width: 600px;
+    /* border-radius: 30px; */
+    margin-right: 5%;
+    margin-top: 3%;
+    height: 480px;
+    border-radius: 0px 14px 14px 0px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 
 
 }
+
+.signUp{
+    display: flex;
+    /* margin-top: 30px;
+    margin-left: 70px;
+    width: 90%;
+    border-radius: 20px; */
+    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+
+
+}
+.signup{
+    margin-top: -3%;
+}
 .form{
-    margin-left: 5%
+    margin-left: 15%;
+   
 }

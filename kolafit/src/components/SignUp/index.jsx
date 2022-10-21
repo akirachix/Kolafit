@@ -6,9 +6,6 @@ import {Link} from "react-router-dom";
 
 
 
-
-
-
 const Signup = () => {
 
 const [email, setEmail] = useState("");
@@ -39,9 +36,9 @@ const submitting = (event) => {
   return(
     <div className='signUp'>
       <div className='main'>
-         <img src={kola} height = "500" width = "400"/>
+         <img src={kola} height = "480" width = "380"/>
       </div>
-
+<div className='main-container'>
       <div className='form'>
                 <h2 className='signup'>Sign Up</h2>
                 <form onSubmit={submitting}>
@@ -104,6 +101,7 @@ const submitting = (event) => {
                 </form>
                
             </div>
+     </div>
      </div>
     
   )}
