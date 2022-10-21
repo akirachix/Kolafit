@@ -1,0 +1,31 @@
+.loan{ 
+    border: solid 1px blue;
+    background-color: white;  
+    color: #1829C1;    
+    width: 150px; 
+    height: 50px; 
+    border-radius: 10%;  
+    padding: 3%;  
+} 
+.eligibility{  
+    border: solid 1px blue;
+    background-color: white;  
+    color: #1829C1;    
+    width: 150px; 
+    height: 50px; 
+    border-radius: 10%;   
+    padding: 3%;  
+    margin-left: 45%;
+}  
+.buttons{ 
+    display: flex;
+    margin-left: 34%; 
+    align-items: center;
+    margin-top: 13%;
+} 
+.FinancialEducation h2{  
+    color: #1829C1; 
+    margin-top: 10%;
+
+}
+ 
