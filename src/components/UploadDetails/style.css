@@ -1,0 +1,187 @@
+/* .back{ 
+    color: #f4f5fb; 
+    background-color: #4460DC; 
+    width: 80px; 
+    height: 40px;  
+    transition: all 0.5s;
+    cursor: pointer; 
+    vertical-align: middle;
+   
+}  
+.back span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .back span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .back:hover span {
+    padding-right: 25px;
+  }
+  
+  .back:hover span:after {
+    opacity: 1;
+    right: 0;
+  }   */  
+
+  body {
+    /* background: linear-gradient(
+      90deg,
+      rgba(48, 16, 255, 1) 0%,
+      rgba(100, 115, 255, 1) 100%
+    ); */
+    background-color: #FFFFFF;  
+   
+  }  
+  .DetailsForm {
+    background-color: white;
+    height: 550px;
+    width: 800px;
+    margin-left: 250px;
+    margin-top: 60px;
+    /* display: flex;   */
+    box-shadow: 10px 10px 10px 10px rgb(241, 235, 235);   
+    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+    border-top-right-radius: 50px; 
+    border-bottom-right-radius: 50px;  
+    border-top-left-radius: 50px; 
+    border-bottom-left-radius: 50px;    
+     
+     
+
+    
+  }  
+  /* .moredetails{ 
+    width: 20%;
+
+  }    */
+
+   
+
+.back{
+    height: 33px;
+    margin-top: 5%;
+    width: 100px;
+    background-color: #425BDC;
+    height: 37px;
+    border: none;
+    border-radius: 50px;
+    color: #FFFFFF;
+    font-size: 15px; 
+    margin-left: 6%;
+}  
+.back span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.back span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.back:hover span {
+  padding-right: 25px;
+}
+
+.back:hover span:after {
+  opacity: 1;
+  right: 0;
+}   
+ 
+.proceed{
+    height: 33px;
+    margin-top: 5%;
+    width: 100px;
+    background-color: #425BDC;
+    height: 37px;
+    border: none;
+    border-radius: 50px;
+    color: #FFFFFF;
+    font-size: 15px; 
+    margin-left: 17%;
+    
+}  
+     
+.name{  
+    height: 30px;
+    width: 300px;
+    padding-left: 5px;
+    border-color: #728dd7 ;
+    border: none;
+    border: 2px #728dd7 solid;
+    border-radius: 13px; 
+    
+}   
+.container{ 
+    height: 22px;
+    width: 290px;
+    padding-left: 5px;
+    border-color: #728dd7 ;
+    border: none;
+    border: 2px #728dd7 solid;
+    border-radius: 15px;
+}  
+
+.left{ 
+    background-color: #4256f3; 
+    height: 550px;
+    margin-left: -20px;
+    width: 50%; 
+    border-top-left-radius: 50px; 
+    border-bottom-left-radius: 50px;    
+
+} 
+.Form{ 
+  height: 550px;
+  width: 750px; 
+  align-items: center;
+  margin-left: 35%; 
+  border-top-right-radius: 50px; 
+  border-bottom-right-radius: 50px; 
+}  
+.Front{
+  margin-left: 55%;
+  margin-top: -62%;   
+
+ 
+ 
+} 
+.moredetails img{  
+  width: 90%;
+  margin-left: 5%;
+
+} 
+.buttons{ 
+  display: flex;
+} 
+.rentAmount{ 
+  padding-top: 2%; 
+}  
+.billName{ 
+  padding-top: 2%; 
+} 
+.billRange{  
+  padding-top: 2%; 
+} 
+.loanAmount{
+  padding-top: 2%;
+} 
+.logo img{ 
+    margin-left: 0%;
+}
