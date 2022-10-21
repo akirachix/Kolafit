@@ -53,6 +53,10 @@ button{
 
     /* border-radius:30px; */
 }
+.main img{
+    height: 470px;
+    width: 400px;
+}
 .main-container{
     background-color:white;
     width: 600px;

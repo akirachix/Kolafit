@@ -21,7 +21,7 @@ const Login = () => {
     return (
         <div className="login">
             <div className="image">
-                <img src={kola} alt="login" width="400" height="500"></img>
+                <img src={kola} alt="login"></img>
             </div>
 
          <div className='main-container'>

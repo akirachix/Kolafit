@@ -15,10 +15,11 @@
 }
 
 .form,
-.image {
-    margin: 0;
-    height: inherit;
+.image img{
+        height: 470px;
+        width: 400px;
 }
+
 
 h2 {
     margin-top: 10%;
