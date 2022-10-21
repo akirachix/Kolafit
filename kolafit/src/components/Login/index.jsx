@@ -24,6 +24,7 @@ const Login = () => {
                 <img src={kola} alt="login" width="400" height="500"></img>
             </div>
 
+         <div className='main-container'>
 
             <div className="form">
                 <h2>Login</h2>
@@ -67,7 +68,7 @@ const Login = () => {
                     <span >  <Link to="/signup">Signup</Link>  </span> 
                 </p>
             </div>
-
+            </div>
         </div>
     );
 };
