@@ -36,7 +36,7 @@ const submitting = (event) => {
   return(
     <div className='signUp'>
       <div className='main'>
-         <img src={kola} height = "480" width = "380"/>
+         <img src={kola}/>
       </div>
 <div className='main-container'>
       <div className='form'>
