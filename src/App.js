@@ -1,7 +1,8 @@
 import "./App.css";
 import Signup from "./components/SignUp"; 
 import Splashscreen from "./components/splashscreen"
-import Details from "./components/UploadDetails" 
+import Details from "./components/UploadDetails"  
+import FinancialEducation from "./components/Financial Education"
 // import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
@@ -9,7 +10,7 @@ function App() {
     <div className="App">
       
     {/* <Splashscreen/>      */}
-    <Details/>     
+    <FinancialEducation/>     
     </div> 
     
   );
