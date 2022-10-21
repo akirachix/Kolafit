@@ -1,0 +1,30 @@
+.Loan{
+    margin-top: 3%;
+}
+
+.Loan h1{
+   color: rgb(15, 15, 170); 
+   padding: 3%;
+   margin-top: -3%;
+}
+
+.Loan p {
+    text-align: center;
+    font-family: nunito;
+}
+
+.back{
+    height: 33px;
+    width: 450px;
+    background-color: #425BDC;
+    border: none;
+    border-radius: 7px;
+    color: #FFFFFF;
+    font-size: 15px;
+    margin-left: 5%;
+    margin-top: 10%;
+}
+
+.logo{
+    margin-right: 80%;
+}
