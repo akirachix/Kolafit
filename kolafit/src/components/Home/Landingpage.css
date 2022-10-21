@@ -4,19 +4,22 @@
     background-color: white;
     /* margin-left: 10%; */
 }
-.btn{
-    border: solid 2px blue;
+.button-holder{
+    display: flex;
+    margin-top: 13%;
+  
+}
+.bttn{
+    margin-left: 27%;
+    border: solid 1px blue;
     background-color: white;
+}
+.button-one{
+    margin-left: 3%;
+}
+.btn{
     color: blue;
     text-decoration: none;
-    padding: 10px;
-}
-.main-button{
-    background-color: white;
-    padding: 10px;
-    margin-left: 10%;
-    /* width: 60%; */
-   
 }
 img{
     display: block;
@@ -32,4 +35,26 @@ img{
 .btn-edu{
   border-width: 60%;
   border-radius: 3px;
+}
+.red{
+    color: #ee4338;
+    /* margin-top: -20%; */
+    margin-right: 65%;
+    margin-top: -15%;
+}
+.yellow{
+    color: #ffff0c;
+    margin-right: 35%;
+    margin-top: -20%;
+
+}
+.lightgreen{
+    color: #00ad53;
+    margin-top: -3%;
+    margin-left: 27%;
+}
+.darkgreen{
+    color: #076c3a;
+    margin-left: 62%;
+    margin-top: 15%;
 }
