@@ -9,8 +9,8 @@ function App() {
   return (
     <div className="App">
       
-    {/* <Splashscreen/>      */}
-    <FinancialEducation/>     
+    <Details/>     
+    {/* <FinancialEducation/>      */}
     </div> 
     
   );
