@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./style.css";
-import kola from "../Kola.png"
+// import kola from "../Kola.png"
 import { Link } from "react-router-dom";
 
 const Login = () => {
@@ -20,9 +20,7 @@ const Login = () => {
    
     return (
         <div className="login">
-            <div className="image">
-                <img src={kola} alt="login"></img>
-            </div>
+        
 
          <div className='main-container'>
 

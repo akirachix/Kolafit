@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+body{
+    background-color:#CAD8E8;
+    /* opacity: .5; */
+}
 h2{
     align-items: center;
     margin-top: 4%;
@@ -5,17 +10,20 @@ h2{
 
 .signup{
     color: #6A7DE1;
+    font-family: Montserrat;
+    font-weight: 500px;
+
 }
-.container{
-    height: 10px;
-    width: 200px;
-    padding-left: 5px;
+/* .container{
+    /* height: 10px;
+    width: 200px; */
+    /* padding-left: 5px;
     padding-bottom: 1%;
     border-color: #a0b4ec ;
     border: none;
     border: 2px #b7c7f3 solid;
     border-radius: 9px;
-    }
+    } */ */
 .password{
     margin-top: 3%;
 }
@@ -39,51 +47,35 @@ button{
     border-radius: 50px;
     color: #FFFFFF;
     font-size: 15px;
+   
 }
 
-.main{
-    background-color: #6A7DE1;
-    margin-top: 3%;
-    margin-left: 5%;
-    margin-bottom: 2%;
-    width: 600px;
-    height: 480px;
-    border-radius: 14px 0px 0px 14px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 
-    /* border-radius:30px; */
-}
-.main img{
-    height: 470px;
-    width: 400px;
-}
-.main-container{
-    background-color:white;
-    width: 600px;
-    /* border-radius: 30px; */
-    margin-right: 5%;
-    margin-top: 3%;
-    height: 480px;
-    border-radius: 0px 14px 14px 0px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-
-
-}
 
 .signUp{
     display: flex;
-    /* margin-top: 30px;
-    margin-left: 70px;
-    width: 90%;
-    border-radius: 20px; */
-    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
-
-
 }
 .signup{
     margin-top: -3%;
 }
 .form{
-    margin-left: 15%;
+    margin-left: 12%;
+    background-color: white;
+    opacity: 1;
    
 }
+.main-container{
+margin-left: auto;
+margin-right: auto;
+border: solid white 2px;
+height: 100%;
+width: 600px;
+border-radius: 12px;
+margin-top: 5%;
+background-color: white;
+box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+
+
+}
+

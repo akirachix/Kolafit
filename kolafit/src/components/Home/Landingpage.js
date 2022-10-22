@@ -8,7 +8,7 @@ const LandingPage = ()=> {
             
             
            
-            <img src= {image} alt="credit gauges"/>
+            <img className='first-gauge' src= {image} alt="credit gauges"/>
             <div>
             <div className='red'>300-629 <br/> <span> Bad</span></div>
 
