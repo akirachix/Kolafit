@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 import { useState } from 'react';
-import kola from "../Kola.png"
+import pic from "../kolafit-logo.png"
 // import './App'
 import {Link} from "react-router-dom";
 
@@ -12,14 +12,12 @@ const Details = () => {
     const [location, setLocation] = useState("");
     const [id_number, setId_Number] = useState("");
     const [upload, setUpload_ID] = useState("");
-    const [front, setFront_ID] = useState("");
-    const [back, setBack_ID] = useState("");
-    
+   
 
 
     const submitting = (event) => {
         event.preventDefault()
-        const user = {location, id_number, upload, front,back }
+        const user = {location, id_number, upload, }
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
         const requestOptions = {
@@ -33,14 +31,16 @@ const Details = () => {
         }
 
         return(
+             
+            <div className="details">
+                 <div className="pic">
+                <img src={pic} alt="logo" width="60" height="60"></img>
+            </div> 
 
-            <div className="body">
-                <div className="image">
-                <img src={kola} alt="login" width="400" height="500"></img>
-            </div>
+
+
             <div className='form'>
-            
-                <form onSubmit={submitting}>
+             <form onSubmit={submitting}>
                     <label>
                         <div className="location">
                             <input className="container"
@@ -73,33 +73,14 @@ const Details = () => {
                                 }
                                 }
                             ></input><br></br></div>
-                        <div className="Front">
-                            <h5> </h5>
-                            <input className="containerI"
-                                type="text"
-                                placeholder="Front ID"
-                                value={front}
-                                onChange={(e) => {
-                                    setFront_ID(e.target.value);
-                                }
-                                }
-                            ></input><br></br></div>
-                        <div className="Back">
-                            <h5> </h5>
-                            <input className="containerII"
-                                type="text"
-                                placeholder="Back ID"
-                                value={back}
-                                onChange={(e) => {
-                                    setBack_ID(e.target.value);
-                                }
-                                }
-                            ></input><br></br></div>
+                      
                     </label>
                     <Link to="/home">
                     <button className="previous" type='submit' >Back</button>
                     </Link>
+                    <Link to = "/bills">
                     <button className="proceed" type='submit' >Proceed</button>
+                    </Link>
                 </form>
                 
 
