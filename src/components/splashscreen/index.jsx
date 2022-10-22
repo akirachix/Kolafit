@@ -2,6 +2,7 @@ import React , {useState,useEffect} from 'react';
 import HashLoader from "react-spinners/HashLoader"; 
 import "../splashscreen/style.css" 
 import about from "./about.png"
+import {Link} from 'react-router-dom'
 
 function Splashscreen(){  
     const [loading,setLoading]=useState(false); 
