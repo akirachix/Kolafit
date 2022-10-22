@@ -2,7 +2,7 @@ import React, {useState,Component} from 'react';
 import ReactDOM from 'react-dom';
 import "../UploadDetails/style.css" 
 import "../Kola.png"
-import kola from "../Kola.png" 
+// import kola from "../Kola.png" 
 import kolafit from './image-removebg-preview 1.png';
 function Details(){
     const bills = [
@@ -24,7 +24,11 @@ function Details(){
     const [bill, setBill] = useState("")
     const [range, setRange] = useState("")
     const [amount, setAmount] = useState("")
-    const [rent, setRent] = useState("");
+    const [rent, setRent] = useState(""); 
+    const [receipts, setReceipts] = useState("");  
+    const [biireceipts,setBillReceipt]=useState("")
+    
+    
     const detailSubmit=(event)=>{
         event.preventDefault()
         const details = {bills, billRange,loanAmount,rent }
@@ -53,27 +57,38 @@ function Details(){
         setAmount(e.target.value)
     }
     return(
-        <div className='DetailsForm'>
-            <div className='left'>
-             <div className='logo'>
-            <img src= {kolafit} alt='Logo'></img>
+        <div className='DetailsForm'> 
+            <div className='logo'>
+            <img  className="logo" src= {kolafit} alt='Logo'></img>
             </div>
+            {/* <div className='left'>
+    
             <div className='moredetails'>
                 <img src= {kola} alt='moredetails'></img>
             </div>
-            </div>
+            </div> */}
         <div className='Front'>
         <form onSubmit={detailSubmit}>
          <label>
             <div className="rentAmount">
-                            <input className="container"
+                            <input className="rent"
                                 type="text"
                                 placeholder=" Enter rent amount"
                                 value={rent}
                                 onChange={(e) => {
                                     setRent(e.target.value)
                                 }}
-                            ></input></div>
+                            ></input></div> 
+
+                            <div className="rentReciepts">
+                            <input className="reciept"
+                                type="text"
+                                placeholder="Upload Rent Reciepts"
+                                value={receipts}
+                                onChange={(e) => {
+                                    setReceipts(e.target.value)
+                                }} 
+                            ></input></div>                
             <div className='billName'>
             <br />
             <select className='name' onChange={handleBillChange}>
@@ -87,15 +102,26 @@ function Details(){
             <option value="Select your bill range "> -- Select your bill range -- </option>
             {billRange.map((range) => <option value={range.value}>{range.label}</option>)}
              </select>
-             </div>
+             </div> 
+             <div className="billReceipte">
+                            <input className="billReceipts"
+                                type="text"
+                                placeholder="Upload bill Reciepts"
+                                value={biireceipts}
+                                onChange={(e) => {
+                                    setBillReceipt(e.target.value)
+                                }} 
+                            ></input></div>  
              <div className='loanAmount'>
             <br />
             <select className='name' onChange={handleAmountChange}>
             <option value="Select your Loan amount "> -- Select your Loan amount -- </option>
             {loanAmount.map((amount) => <option value={amount.value}>{amount.label}</option>)}
-            </select>
+            </select> 
+
             {/* <input type="file" onChange={this.onFileChange} />  */}
-            </div>
+            </div> 
+       
         {/* <div className='buttons'>   */}
         <button className='back' type='submit' >Back</button>
         <button className='proceed' type='submit' onClick={detailSubmit}>Proceed</button>
@@ -103,7 +129,7 @@ function Details(){
         </label>
         </form>
         </div>
-        </div>
+        </div>     
     );
 }
 export default Details
