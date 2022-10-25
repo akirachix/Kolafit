@@ -1,8 +1,10 @@
 import React, {useState,Component} from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 import "../UploadDetails/style.css" 
+import {Link} from 'react-router-dom'
 import "../Kola.png"
 // import kola from "../Kola.png" 
+//CLICK RFC TO GENERATE LAYOUT.
 import kolafit from './image-removebg-preview 1.png';
 function Details(){
     const bills = [
@@ -121,10 +123,13 @@ function Details(){
 
             {/* <input type="file" onChange={this.onFileChange} />  */}
             </div> 
-       
+       <div className='bottom-buttons'>
+       <Link path to='/details' ><button className='back' type='submit' style={{width: "150px", marginBottom: "4px"}} >Back</button></Link>
+        <Link path to='/final'> <button className='proceed'>Submit</button></Link>
+      
+       </div>
         {/* <div className='buttons'>   */}
-        <button className='back' type='submit' >Back</button>
-        <button className='proceed' type='submit' onClick={detailSubmit}>Proceed</button>
+        
         {/* </div>   */}
         </label>
         </form>

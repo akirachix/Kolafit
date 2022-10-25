@@ -2,28 +2,22 @@ import React, { useState } from "react";
 import "./style.css";
 // import kola from "../Kola.png"
 import { Link } from "react-router-dom";
-
 const Login = () => {
     const [email, setEmail] = useState("");
     console.log(email);
     const [password, setPassword] = useState("");
     console.log(password);
-
     const handleSubmit = () => {
+        // e.preventDefault()
         const data = {
             email: email,
             password: password,
         };
         console.log(JSON.stringify(data));
     };
-
-   
     return (
         <div className="login">
-        
-
          <div className='main-container'>
-
             <div className="form">
                 <h2>Login</h2>
                 <form onSubmit={handleSubmit}>
@@ -63,7 +57,7 @@ const Login = () => {
                     </Link>
                 </form>
                 <p className="account">Don't have an account?
-                    <span >  <Link to="/signup">Signup</Link>  </span> 
+                    <span >  <Link to="/signup">Signup</Link>  </span>
                 </p>
             </div>
             </div>
@@ -71,3 +65,8 @@ const Login = () => {
     );
 };
 export default Login;
+
+
+
+
+

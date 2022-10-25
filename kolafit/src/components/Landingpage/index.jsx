@@ -1,6 +1,6 @@
 // import React from 'react';
 import {Link} from 'react-router-dom';
-// import myImage from '../Home.png'
+import myImage from '../Home.png'
 
 const Landingpage = () => {
 
@@ -9,9 +9,9 @@ const Landingpage = () => {
         <div className='full-div'>
 
             <div className='landing-page-image'>
-            {/* <img className='img' src={myImage} alt="home" /> */}
+            <img className='img' src={myImage} alt="home" style={{width: "550px", height: "250px", marginTop:"20px", marginRight:"600px",  }} />
             </div>
-<div>
+<div className='text'>
 <div className='first-heading'>
 <h2>About KolaFit</h2>
 <h3>KolaFit improves the creditworthiness by aggregating a customer’s data after calculating their loan eligibility <br/>

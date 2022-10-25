@@ -1,61 +1,67 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 body{
-    background-color:#CAD8E8;
+    background-color:white;
     /* opacity: .5; */
+   
+
 }
+.main{
+    border: solid 2px white;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 6%;
+    border-radius: 12px;
+
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+/* .names{
+display: flex;
+} */
+
+
 h2{
     align-items: center;
-    margin-top: 4%;
+    margin-top: 6%;  
 }
-
 .signup{
     color: #6A7DE1;
     font-family: Montserrat;
     font-weight: 500px;
-
 }
-.names{
-    display: flex;
-
-}
-#name1{
+.first-container{
+    width: 850%;
     height: 30px;
-    width: 189px;
+    border-color:  #6A7DE1 ;
     border: 2px #6A7DE1  solid;
     border-radius: 10px;
-
+    margin-left: 20%;
+    margin-top: 10px;
+   
 }
-#name2{
+.second-container{
+    margin-left: 20%;
+    margin-top: -35%;
     height: 30px;
-    width: 189px;
-    border: 2px #6A7DE1  solid;
-    border-radius: 10px;
-    margin-left: 5%;
-
-}
-.container {
-
-    height: 30px;
-    width: 400px;
-    padding-left: 5px;
-    border-color: #6A7DE1;
-    border: none;
+    border-color:  #6A7DE1 ;
     border: 2px #6A7DE1  solid;
     border-radius: 10px;
 }
-.container .name1{
-    width: 200px;
+.gender{
+    margin-top: -5%;
+    height: 35px;
+    border-color:  #6A7DE1 ;
+    border: 2px #6A7DE1  solid;
+    border-radius: 10px;  
+    width: 510px; 
 }
 .password{
     margin-top: 3%;
 }
-.gender{
-    margin-top: 3%;
-}
+
 .email {
     margin-top: 3%;
 }
-
 .confirm_password{
     margin-top: 3%;
 }
@@ -69,11 +75,7 @@ button{
     border-radius: 50px;
     color: #FFFFFF;
     font-size: 15px;
-   
 }
-
-
-
 .signUp{
     display: flex;
 }
@@ -81,10 +83,11 @@ button{
     margin-top: -3%;
 }
 .form{
-    margin-left: 12%;
+   /* border-radius: 12px; */
     background-color: white;
-    opacity: 1;
-   
+    /* opacity: 1; */
+    /* padding: 15%; */
+   padding-right: 50%;
 }
 .main-container{
 margin-left: auto;
@@ -96,8 +99,5 @@ border-radius: 12px;
 margin-top: 5%;
 background-color: white;
 box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-
-
-
 }
 
