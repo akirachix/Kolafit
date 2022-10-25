@@ -15,7 +15,7 @@ It will be built by KolaFit, Akirachix Software Engineering students based on th
 Most of the blue-collar workers who are potential enough to pay back loans have difficulties in accessing loans due to a lack of collateral and information asymmetry. 
 The aim of KolaFit is to improve the creditworthiness of blue-collar workers so as to access loans from the Financial institution.
 
-We decided to build a platform that enables us to collect the users’ information through an SMS. We store that data and calculate their loan eligibility. 
+We decided to build a platform that enables us to collect the users’ information through a PWA. We store that data and calculate their loan eligibility. 
 This will enable the lenders to use an API to tap into our system and get the data.
 
 #Our Users
