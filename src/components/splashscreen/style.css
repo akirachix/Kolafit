@@ -1,0 +1,35 @@
+.aboutText h2{ 
+    color: #4460DC;   
+    font-family: 'Montserrat', sans-serif;   
+}  
+.aboutText p{  
+    font-family: 'Montserrat', sans-serif;  
+    font-size:19px;
+
+} 
+.aboutText{ 
+    margin-top:6%;
+    margin-left:20%;
+}
+.hashloader{ 
+    display: block;
+    margin-left: 45%;
+    margin-right:25%;
+    margin-top: 25%;
+    margin-bottom: 25%;
+    width: 50%;
+} 
+.About{ 
+    display: flex; 
+
+}   
+.About img{  
+    /* width: 19%;  
+    height:10%;  */ 
+    max-width: 30%; 
+    height: auto;
+    margin-top: 6%;  
+    margin-left: 8%;
+} 
+
+
