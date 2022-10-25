@@ -13,6 +13,11 @@
     margin-right: 3%;
     margin-top: 10%;
 }
+.forgot{
+    margin-top: -6%;
+    margin-left: 70%;
+    font-size: small;
+}
 /* .form,
 .image img{
         height: 470px;
@@ -25,20 +30,29 @@ h2 {
     font-family: Montserrat;
 }
 .checkbox {
-    margin-right: 10%;
+    margin-right: 50%;
+}
+.box{
+    margin-right: 86%;
+    margin-top: 3%
+}
+.log{
+    color: black;
+    margin-top: -3%;
+    margin-left: 4%;
 }
 .check {
-    display: flex;
-    font-size: smaller;
-    align-items: center;
-    width: 400px;
-    margin-right: 70%;
-    margin-top: 8%;
-    padding-left: 15%;
+    /* display: flex; */
+    /* font-size: smaller; */
+    /* align-items: center; */
+    /* width: 400px; */
+    /* margin-right: 70%; */
+    /* margin-top: 8%; */
+    /* padding-left: 15%; */
+    /* margin-right: 40%; */
+    margin-top: 3%;
 }
-.forgot {
-    margin-left: 40%;
-}
+
 .account {
     text-align: center;
     justify-content: center;

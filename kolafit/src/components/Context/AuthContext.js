@@ -23,7 +23,7 @@ export const AuthProvider = ({ children }) => {
     // const navigate = useNavigate();
 
 
-    const registerUser = async ({ fullName, gender, email, password }) => {
+    const registerUser = async ({ firstName,lastName, gender, email, password }) => {
 
         const det = {
             "first_name": firstName,
@@ -34,7 +34,7 @@ export const AuthProvider = ({ children }) => {
         }
         console.log(det)
 
-        const response = await fetch(" http://localhost:8000/api/signup/", {
+        const response = await fetch(" http://127.0.0.1:8000/api/signup/", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
