@@ -8,11 +8,9 @@
     margin-left: 70px;
     width: 90%;
     border-radius: 20px;
-   
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
 }
 .text{
-    
 }
 .form {
     height: 400px;
@@ -87,18 +85,18 @@ label h5 {
     color: white;
     background-color: #6A7DE1 ;
     border-radius: 10px;
-    
 }
 .sign-text{
     text-decoration: none;
     color: white;
-
 }
 .landing-page-image{
     border: solid 5px blue;
     padding: 50%;
 }
-/* img{
-    width: 20%;
-    height: 20%;
-} */
+
+
+
+
+
+
