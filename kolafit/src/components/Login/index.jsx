@@ -45,8 +45,11 @@ const Login = () => {
                             <br></br>
                         </div>
                         <div className="check">
-                            <input type="checkbox"></input>
-                            <p>Keep me logged in</p>
+                            <input className="box" type="checkbox"></input>
+                            <div className="log">
+                            <p className="log">Keep me logged in</p>
+                            </div>
+                            
                             <div className="forgot">
                                 <a href="/forgot"><span >   Forgot password?   </span> </a>
                             </div>
