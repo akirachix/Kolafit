@@ -131,15 +131,15 @@ const Signup = () => {
                   <br></br>
                 </div>
               </label>
-              <Link path to="/Login">
+            
                 <button className="button" type="submit">
                   SignUp
                 </button>
-              </Link>
+            
             </form>
             <p className="account">
               Have an account?
-              <a href="/home">
+              <a href="/login">
                 <span> Login </span>{" "}
               </a>{" "}
             </p>
