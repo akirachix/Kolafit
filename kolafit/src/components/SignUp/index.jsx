@@ -131,18 +131,25 @@ const Signup = () => {
                   <br></br>
                 </div>
               </label>
-            
-                <button className="button" type="submit">
+
+              <Link path to="/login">
+              <button className="button" type="submit">
                   SignUp
                 </button>
+              </Link>
+            
+                
             
             </form>
+            <Link path to="/login">
             <p className="account">
               Have an account?
               <a href="/login">
                 <span> Login </span>{" "}
               </a>{" "}
             </p>
+            </Link>
+           
           </div>
         </div>
       </div>
