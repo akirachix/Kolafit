@@ -46,8 +46,8 @@ const Login = () => {
                         </div>
                         <div className="check">
                             <input className="box" type="checkbox"></input>
-                            <div className="log">
-                            <p className="log">Keep me logged in</p>
+                            <div className="keep">
+                            <p className="keep">Keep me logged in</p>
                             </div>
                             
                             <div className="forgot">
