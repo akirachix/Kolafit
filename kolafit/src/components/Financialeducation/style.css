@@ -12,18 +12,33 @@ body{
    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
    background-color: #FFFFFF;
 }
- .Loan h1{
+
+/* .Lo{
+   border: solid;
+} */
+ .Lo h1{
   color: rgb(15, 15, 170);
   margin-top: -5%;
+  /* border: solid; */
+  margin-left: 3%;
+  width: 600px;
+ 
 }
-.Loan h4{
+.Lo h3{
    color: rgb(15, 15, 170);
    margin-top: 4%;
+   /* border: solid; */
+   width: 700px;
+   margin-left: 3%;
  }
-.Loan p {
+.Lo p {
    text-align: left;
    font-family: nunito;
    margin-top: 2%;
+   /* border: solid; */
+   margin-left: 3%;
+   width: 700px;
+   color: black;
 }
  .back{
    height: 33px;
