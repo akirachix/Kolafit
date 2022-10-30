@@ -1,0 +1,55 @@
+.Ab{
+    /* margin-top: 10%; */
+    margin-left: 0%;
+    padding: 15%;
+    width: 70%;
+    background-color: rgb(14,34,93);
+    /* border-radius: 10px; */
+    box-shadow: rgba(189, 186, 186, 0.25) 0px 54px 55px, rgba(184, 182, 182, 0.12) 0px -12px 30px, rgba(187, 185, 185, 0.12) 0px 4px 6px, rgba(199, 197, 197, 0.17) 0px 12px 13px, rgba(209, 208, 208, 0.09) 0px -3px 5px;
+   
+ }
+ .bar{
+    display: flex;
+    margin-top: -17%; 
+ }
+
+.log{
+    margin-left: -14%;
+    background-color: white;
+    padding: 1.5%;
+    border-radius: 200px
+    
+}
+.Start{
+    margin-left: 110%;
+    border-radius: 5px;
+    margin-top: -1%;
+    
+}
+.Phot{
+    margin-top: -23.2%;
+    margin-right: 3%;
+}
+
+ .word{
+    margin-top: 2%;
+    margin-right: 3%;
+} 
+
+.word h2{
+    color: rgb(17, 46, 134);
+    font-family: nunito;
+    margin-top: -0.4%;
+   
+} 
+.word p{
+font-family: nunito;
+margin-left: 10%;
+width: 1000px;
+color: rgb(60, 108, 163);
+} 
+/* @media only screen and (max-width: 320px) {
+    #style-switcher {
+      display: none;
+    }
+} */

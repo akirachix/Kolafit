@@ -1,0 +1,76 @@
+body{
+  /* background-color: #728dd7; */
+  background-color: white;
+  }
+  .details {
+    margin-top: 5%;
+    margin-left: 20%;
+    padding: 4%;
+    width: 60%;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
+  .pic{
+    margin-right: 90%;
+  }
+  .fill{
+    margin-top: 4%;
+    height: 400px;
+
+  }
+  .Upload{
+    margin-top: 5%;
+  }
+  .Id {
+    margin-top: 3%;
+  }
+  .Upload p{
+    /* margin-bottom: 0.5%; */
+    margin-right: 56%;
+    /* font-family: nunito; */
+    color: gray;
+    
+  }
+  .Front{
+    margin-top: 3%;
+   }
+  .container{
+  height: 35px;
+  width: 500px;
+  padding-left: 5px;
+  border-color: #728dd7 ;
+  border: none;
+  border: 2px #728dd7 solid;
+  border-radius: 7px;
+  }
+
+.But{
+  padding-top: 10%;
+}   
+  .previous{
+  height: 33px;
+  width: 150px;
+  background-color: #425BDC;
+  border: none;
+  border-radius: 7px;
+  color: #FFFFFF;
+  font-size: 15px;
+  margin-right: 13%;
+  margin-top: 5%;
+  }
+  .proceed{
+  height: 33px;
+  width: 150px;
+  background-color: #425BDC;
+  border: none;
+  border-radius:7px;
+  color: #FFFFFF;
+  font-size: 15px;
+  margin-top: 5%;
+   }
+   @media only screen and (max-width: 320px) {
+    #style-switcher {
+      display: none;
+    }
+}
