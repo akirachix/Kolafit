@@ -5,9 +5,10 @@ import ReactConfetti from 'react-confetti'
 function Final (){
     return(
         <div>
-              <div className="confetti-text" style={{ border: "solid blue 2px", backgroundColor:"white", marginRight:"auto",marginLeft:'auto', marginBottom:'auto', marginTop:'20%', width:"400px"}} >
-            <h2 style={{color: "black",marginLeft:5}}> Thank you for trusting and using KolaFit!!. <br /> We will review your details and get  back to you </h2> 
+              <div className="confetti-text" style={{backgroundColor:"white", marginRight:"auto",marginLeft:'auto', marginBottom:'auto', marginTop:'20%', width:"400px"}} >
+            <h3 style={{color: "black",marginLeft:5}}> Thank you for trusting and using KolaFit!!. We will review your details and get  back to you </h3> 
             </div>
+            
             <div className="confetti" >
                 <ReactConfetti/>
               

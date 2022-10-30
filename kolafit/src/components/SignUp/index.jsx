@@ -14,9 +14,9 @@ function Signup() {
 
 
   const options = [
-    { value: 'Male', label: 'Male' },
-    { value: 'Female', label: 'Female' },
-    { value: 'Other', label: 'Other' },
+    { value: 'M', label: 'Male' },
+    { value: 'F', label: 'Female' },
+    { value: 'O', label: 'Other' },
     
   ]
 
@@ -130,12 +130,11 @@ function Signup() {
 
        <div>
                 <Select className='container' name="gender" placeholder="Select Gender" options={options}
-                {...register("gender")}
-                style={{ marginTop: "4%" }}
-                onChange={handleChange}
+                {...register("gender")}style={{ marginTop: "4%" }}
+                // onChange={handleChange}
           
-                // onChange={ gender=>handleChange({target:{value:gender.label, name:'gender'}})}
-            />
+                onChange={ gender=>handleChange({target:{value:gender.value, name:'gender'}})}
+                />
                 <div className='invalid-feedback'>{errors.gender?.message}</div>
                 </div>
 

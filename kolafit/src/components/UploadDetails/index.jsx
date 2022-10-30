@@ -1,22 +1,22 @@
 import React, {useState,Component} from 'react';
 // import ReactDOM from 'react-dom';
-import "../UploadDetails/style.css" 
+import "./style.css" 
 import {Link} from 'react-router-dom'
 import "../Kola.png"
 // import kola from "../Kola.png" 
 //CLICK RFC TO GENERATE LAYOUT.
-import kolafit from './image-removebg-preview 1.png';
+import kolafit from '../image-removebg-preview 1.png';
 function Details(){
     const bills = [
         { label: "Water", value:"Water"},
         { label: "Electricity", value: "Electricity" },
-        { label: "All", value: "All" }
+        // { label: "All", value: "All" }
     ]
-    const billRange=[
-        {label: "1000-1500", value:"1000-1500"},
-        {label: "1000-1500", value:"1000-1500"},
-        {label: "1000-1500", value:"1000-1500"},
-    ]
+    // const billRange=[
+    //     {label: "1000-1500", value:"1000-1500"},
+    //     {label: "1000-1500", value:"1000-1500"},
+    //     {label: "1000-1500", value:"1000-1500"},
+    // ]
     const loanAmount=[
         {label: "1000-1500", value:"1000-1500"},
         {label: "1000-1500", value:"1000-1500"},
@@ -27,13 +27,15 @@ function Details(){
     const [range, setRange] = useState("")
     const [amount, setAmount] = useState("")
     const [rent, setRent] = useState(""); 
-    const [receipts, setReceipts] = useState("");  
-    const [biireceipts,setBillReceipt]=useState("")
+    const [receipts, setFile2] = useState("");  
+    // const [biireceipts,setBillReceipt]=useState("")
+    const [billreceipts, setFile] = useState("")
     
     
     const detailSubmit=(event)=>{
         event.preventDefault()
-        const details = {bills, billRange,loanAmount,rent }
+        setFile(event.target.files[0])
+        const details = {bill, range,amount,rent,billreceipts, receipts }
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
         const requestOptions = {
@@ -52,14 +54,14 @@ function Details(){
     let handleBillChange= (e) => {
         setBill(e.target.value)
       }
-    let handleRangeChange=(e)=>{
-        setRange(e.target.value)
-    }
+    // let handleRangeChange=(e)=>{
+    //     setRange(e.target.value)
+    // }
     let handleAmountChange=(e)=>{
         setAmount(e.target.value)
     }
     return(
-        <div className='DetailsForm'> 
+        <div className='Details'> 
             <div className='logo'>
             <img  className="logo" src= {kolafit} alt='Logo'></img>
             </div>
@@ -82,7 +84,7 @@ function Details(){
                                 }}
                             ></input></div> 
 
-                            <div className="rentReciepts">
+                           {/* <div className="rentReciepts">
                             <input className="reciept"
                                 type="text"
                                 placeholder="Upload Rent Reciepts"
@@ -90,7 +92,16 @@ function Details(){
                                 onChange={(e) => {
                                     setReceipts(e.target.value)
                                 }} 
-                            ></input></div>                
+                            ></input></div>                  */}
+                <div className="RR">
+                  <p> Upload Rent Reciepts</p>
+                 <input className="reciepts"type="file" 
+                    placeholder="Upload rent Reciepts" value={receipts} 
+                   onChange={(e) => {
+                    setFile2 (e.target.value);
+                }
+                }
+                         ></input></div>
             <div className='billName'>
             <br />
             <select className='name' onChange={handleBillChange}>
@@ -98,22 +109,20 @@ function Details(){
             {bills.map((bill) => <option value={bill.value}>{bill.label}</option>)}
              </select>
              </div>
-             <div className='billRange'>
-            <br />
-            <select className='name' onChange={handleRangeChange}>
-            <option value="Select your bill range "> -- Select your bill range -- </option>
-            {billRange.map((range) => <option value={range.value}>{range.label}</option>)}
-             </select>
-             </div> 
-             <div className="billReceipte">
-                            <input className="billReceipts"
-                                type="text"
-                                placeholder="Upload bill Reciepts"
-                                value={biireceipts}
-                                onChange={(e) => {
-                                    setBillReceipt(e.target.value)
-                                }} 
-                            ></input></div>  
+        
+
+                <div className="bill">
+                  <p> Upload bill Reciepts</p>
+                 <input className="billReceipts"type="file" 
+                    placeholder="Upload bill Reciepts" value={billreceipts} 
+                   onChange={(e) => {
+                    setFile (e.target.value);
+                }
+                }
+                         ></input></div>
+
+
+
              <div className='loanAmount'>
             <br />
             <select className='name' onChange={handleAmountChange}>
@@ -123,9 +132,9 @@ function Details(){
 
             {/* <input type="file" onChange={this.onFileChange} />  */}
             </div> 
-       <div className='bottom-buttons'>
-       <Link path to='/details' ><button className='back' type='submit' style={{width: "150px", marginBottom: "4px"}} >Back</button></Link>
-        <Link path to='/final'> <button className='proceed'>Submit</button></Link>
+       <div className='bottom'>
+       <Link path to='/details' ><button className='prev' type='submit' style={{width: "150px", marginBottom: "4px"}} >Back</button></Link>
+        <Link path to='/final'> <button className='nex'style={{width: "150px", marginBottom: "4px"}}>Submit</button></Link>
       
        </div>
         {/* <div className='buttons'>   */}

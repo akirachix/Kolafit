@@ -7,9 +7,17 @@ import {Link} from "react-router-dom";
 const Details = () => {
  const [location, setLocation] = useState("");
  const [id_number, setId_Number] = useState("");
- const [upload, setUpload_ID] = useState("");
+//  const [upload, setUpload_ID] = useState("");
+ const [upload, setFile] = useState()
+
+
+
+
+
  const submitting = (event) => {
      event.preventDefault()
+   setFile(event.target.files[0])
+ 
      const user = {location, id_number, upload, }
      var myHeaders = new Headers();
      myHeaders.append("Content-Type", "application/json");
@@ -21,6 +29,7 @@ const Details = () => {
          ),
          redirect: 'Details'
      };
+     
      }
      return(
        
@@ -50,17 +59,17 @@ const Details = () => {
                              }
                              }
                          ></input></div>
-                     <div className="Upload">
-                         <h5> </h5>
-                         <input className="container"
-                             type="text"
-                             placeholder="Upload ID"
-                             value={upload}
-                             onChange={(e) => {
-                                 setUpload_ID (e.target.value);
-                             }
-                             }
-                         ></input><br></br></div>
+
+                  <div className="Upload">
+                  <p>Upload ID</p>
+                 <input className="container"type="file" 
+                    placeholder="Upload ID" value={upload} 
+                   onChange={(e) => {
+                    setFile (e.target.value);
+                }
+                }
+                         ></input></div>
+                
                 
                  </label>
                  <div className='But'>
@@ -73,7 +82,9 @@ const Details = () => {
                  </div>
              </form>
           
-         </div> 
+         </div>
+
+
      </div>
      )
 };

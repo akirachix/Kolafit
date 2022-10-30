@@ -8,9 +8,9 @@
     background-color: white;
     height: 50%;
 }
-.loggo{
-    margin-top: -5%;
-    margin-left: 55%;
+.fit{
+    margin-top:-10%;
+    margin-left: 46%;
 }
 .loggo2{
    margin-right: 84%;
@@ -34,13 +34,14 @@ h1{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 h4{
-    margin-right: 50%;
+    margin-right: 27%;
     color: aliceblue;
     font-family: nunito;
-    font-size: 30px;
+    font-size: 29px;
+    margin-top: -3%;
 }
 p{
-     margin-right: 48%;
+     margin-right: 50%;
      color: aliceblue;
      font-family: nunito;
 }
@@ -48,10 +49,18 @@ p{
     margin-left: 3%;
     background-color: rgb(9, 9, 92);
     width: 95%;
-    margin-top: 6%;
+    margin-top: 4%;
     /* opacity: 70%; */
     border-radius: 20PX;
     /* margin-right: 13%; */
 }
 
-
+.click{
+    margin-top: 3%;
+background-color: blue;
+    color: white;
+    width: 25%;
+    padding: 2%;
+    margin-left: 25%;
+    border-radius: 11px;
+}
