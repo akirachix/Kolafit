@@ -145,5 +145,6 @@ function Details(){
         </div>
         </div>     
     );
+    // nvddisjgiofssg gkjgflkghjhtyyyyyyyyyyyyyy;lgx,.
 }
 export default Details
