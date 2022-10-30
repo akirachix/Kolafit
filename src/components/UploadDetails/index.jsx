@@ -7,6 +7,11 @@ import "../Kola.png"
 //CLICK RFC TO GENERATE LAYOUT.
 import kolafit from '../image-removebg-preview 1.png';
 function Details(){
+    const bills = [
+        { label: "Water", value:"Water"},
+        { label: "Electricity", value: "Electricity" },
+        // { label: "All", value: "All" }
+    ]
     // const billRange=[
     //     {label: "1000-1500", value:"1000-1500"},
     //     {label: "1000-1500", value:"1000-1500"},
@@ -18,18 +23,19 @@ function Details(){
         {label: "1000-1500", value:"1000-1500"},
         {label: "1000-1500", value:"1000-1500"},
     ]
-    const [electricity, setElectricity] = useState("")
+    const [bill, setBill] = useState("")
     const [range, setRange] = useState("")
     const [amount, setAmount] = useState("")
     const [rent, setRent] = useState(""); 
     const [receipts, setFile2] = useState("");  
-    const [watereciepts, setFile] = useState("")  
+    // const [biireceipts,setBillReceipt]=useState("")
+    const [billreceipts, setFile] = useState("")
     
     
     const detailSubmit=(event)=>{
         event.preventDefault()
         setFile(event.target.files[0])
-        const details = {electricity, range,amount,rent,watereciepts, receipts }
+        const details = {bill, range,amount,rent,billreceipts, receipts }
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
         const requestOptions = {
@@ -40,12 +46,14 @@ function Details(){
             ),
             redirect: 'follow'
         };
-        fetch("http://127.0.0.1:8000/api/details/", requestOptions)
+        fetch("http://127.0.0.1:8000/api/tasks/", requestOptions)
             .then(response => response.text())
             .then(result => console.log(result))
             .catch(error => console.log('error', error));
     }
-
+    let handleBillChange= (e) => {
+        setBill(e.target.value)
+      }
     // let handleRangeChange=(e)=>{
     //     setRange(e.target.value)
     // }
@@ -88,35 +96,29 @@ function Details(){
                 <div className="RR">
                   <p> Upload Rent Reciepts</p>
                  <input className="reciepts"type="file" 
-                    placeholder="Upload rent Reciepts" value={receipts}  
-                    multiple
+                    placeholder="Upload rent Reciepts" value={receipts} 
                    onChange={(e) => {
                     setFile2 (e.target.value);
-                } 
-                
-            
-                }
-                         ></input></div>
-                <div className="billName">
-                  <p> Upload Three Electricity Reciepts</p>
-                 <input className="name"type="file" 
-                    placeholder="Upload Electricity Reciepts" value={electricity} 
-                   onChange={(e) => {
-                    setElectricity (e.target.value);
                 }
                 }
                          ></input></div>
+            <div className='billName'>
+            <br />
+            <select className='name' onChange={handleBillChange}>
+            <option value=" Select the type of Bil you Pay ">Select the type of Bil you Pay</option>
+            {bills.map((bill) => <option value={bill.value}>{bill.label}</option>)}
+             </select>
+             </div>
         
 
                 <div className="bill">
-                  <p> Upload Three Water Bill Reciepts</p>
+                  <p> Upload bill Reciepts</p>
                  <input className="billReceipts"type="file" 
-                    placeholder="Upload Water Bill Reciepts" value={watereciepts} 
-                   onChange={(e) => { 
-                setFile (e.target.value);  
-                
+                    placeholder="Upload bill Reciepts" value={billreceipts} 
+                   onChange={(e) => {
+                    setFile (e.target.value);
                 }
-                } 
+                }
                          ></input></div>
 
 
