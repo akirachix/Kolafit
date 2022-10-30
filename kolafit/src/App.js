@@ -1,12 +1,9 @@
 import "./App.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import Signup from "./components/SignUp";
 import Login from "./components/Login";
 import Landingpage from "./components/Landingpage";
-// import HomeScreen from "./components/HomeScreen";
-// import HomeScreen from "./components/HomeScreen";
-// import HomeScreen from "./components/HomeScreen";
-// import HomeScreen from "./components/HomeScreen";
 import UploadDetails from "./components/UploadDetails";
 import Details from "./components/Details";
 import Financialeducation from "./components/Financialeducation";

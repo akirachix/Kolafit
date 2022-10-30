@@ -1,5 +1,6 @@
 import { createContext, useState, useEffect } from "react";
 import jwt_decode from "jwt-decode";
+import { useRevalidator } from "react-router-dom";
 // import { Axios } from "axios";
 // import { useNavigate } from "react-router-dom";
 
@@ -23,18 +24,19 @@ export const AuthProvider = ({ children }) => {
     // const navigate = useNavigate();
 
 
-    const registerUser = async ({ firstName,lastName, gender, email, password }) => {
+    const registerUser = async ({ first_name,last_name, gender, email, password , confirm_password}) => {
 
         const det = {
-            "first_name": firstName,
-            "lastt_name": lastName,
+            "first_name": first_name,
+            "last_name": last_name,
             "gender": gender,
             "email": email,
-            "password": password
+            "password": password,
+            "confirm_password": confirm_password
         }
         console.log(det)
 
-        const response = await fetch(" http://127.0.0.1:8000/api/signup/", {
+        const response = await fetch( "https://blooming-mountain-74351.herokuapp.com/api/signup/",user, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
