@@ -66,16 +66,7 @@ label h5 {
     margin-left: auto;
     margin-right: auto;
 }
-/* height: "30px",
-width: "400px"
-paddingLeft: "5px",
-borderColor: "#6A7DE1",
-border: "none",
-border: "2px #6A7DE1  solid",
-borderRadius: "10px",
-marginTop: "4%",
-marginLeft: "auto",
-marginRight: "auto" */
+
 .password {
     text-align: center;
     justify-content: center;
@@ -121,3 +112,9 @@ button {
     border: solid 2px white;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
+@media screen and (max-width: 200px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }

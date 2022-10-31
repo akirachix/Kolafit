@@ -90,7 +90,14 @@ button {
   background-color: white;
   /* padding-right: 50%; */
 }
-
+.continer{
+/* border: green; */
+border:  2px #6a7de1 solid;
+border-radius: 8px;
+width: 510px;
+margin-left: auto;
+margin-right: auto;
+}
 .main-container {
   margin-left: auto;
   margin-right: auto;
@@ -121,8 +128,23 @@ color: red;
     margin-left: auto;
     margin-right: auto;
   }
-@media only screen and (max-width: 320px) {
+/* @media only screen and (max-width: 320px) {
     #style-switcher {
-      display: none;
+      /* display: none; */
+    /* }
+    .continer{
+      width: fit-content;
+    }
+    .container{
+      width: fit-content;
+    }
+    .main-container{
+   display: none;
+    }
+  } */ 
+  @media screen and (max-width: 200px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
     }
   }

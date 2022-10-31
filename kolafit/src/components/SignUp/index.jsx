@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
 import axios from "axios";
+import './styles.css';
 import { toast } from 'react-toastify';
 import Select from "react-select";
 // import 'react-toastify/dist/ReactToastify.css';
@@ -128,9 +129,9 @@ function Signup() {
           <div className="invalid-feedback">{errors.last_name?.message}</div>
         </div>
 
-       <div>
-                <Select className='container' name="gender" placeholder="Select Gender" options={options}
-                {...register("gender")}style={{ marginTop: "4%" }}
+       <div style={{marginTop:"4%"}}>
+                <Select className='continer'sty name="gender" placeholder="Select Gender" options={options}
+                {...register("gender")}
                 // onChange={handleChange}
           
                 onChange={ gender=>handleChange({target:{value:gender.value, name:'gender'}})}
