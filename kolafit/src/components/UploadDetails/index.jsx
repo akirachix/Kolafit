@@ -1,9 +1,9 @@
 import React, {useState,Component} from 'react';
 // import ReactDOM from 'react-dom';
-import "./style.css" 
+import "./style.css"
 import {Link} from 'react-router-dom'
 import "../Kola.png"
-// import kola from "../Kola.png" 
+// import kola from "../Kola.png"
 //CLICK RFC TO GENERATE LAYOUT.
 import kolafit from '../image-removebg-preview 1.png';
 function Details(){
@@ -26,12 +26,10 @@ function Details(){
     const [bill, setBill] = useState("")
     const [range, setRange] = useState("")
     const [amount, setAmount] = useState("")
-    const [rent, setRent] = useState(""); 
-    const [receipts, setFile2] = useState("");  
+    const [rent, setRent] = useState("");
+    const [receipts, setFile2] = useState("");
     // const [biireceipts,setBillReceipt]=useState("")
     const [billreceipts, setFile] = useState("")
-    
-    
     const detailSubmit=(event)=>{
         event.preventDefault()
         setFile(event.target.files[0])
@@ -61,12 +59,11 @@ function Details(){
         setAmount(e.target.value)
     }
     return(
-        <div className='Details'> 
+        <div className='Details'>
             <div className='logo'>
             <img  className="logo" src= {kolafit} alt='Logo'></img>
             </div>
             {/* <div className='left'>
-    
             <div className='moredetails'>
                 <img src= {kola} alt='moredetails'></img>
             </div>
@@ -82,8 +79,7 @@ function Details(){
                                 onChange={(e) => {
                                     setRent(e.target.value)
                                 }}
-                            ></input></div> 
-
+                            ></input></div>
                            {/* <div className="rentReciepts">
                             <input className="reciept"
                                 type="text"
@@ -91,12 +87,12 @@ function Details(){
                                 value={receipts}
                                 onChange={(e) => {
                                     setReceipts(e.target.value)
-                                }} 
+                                }}
                             ></input></div>                  */}
                 <div className="RR">
                   <p> Upload Rent Reciepts</p>
-                 <input className="reciepts"type="file" 
-                    placeholder="Upload rent Reciepts" value={receipts} 
+                 <input className="reciepts"type="file"
+                    placeholder="Upload rent Reciepts" value={receipts}
                    onChange={(e) => {
                     setFile2 (e.target.value);
                 }
@@ -109,41 +105,33 @@ function Details(){
             {bills.map((bill) => <option value={bill.value}>{bill.label}</option>)}
              </select>
              </div>
-        
-
                 <div className="bill">
                   <p> Upload bill Reciepts</p>
-                 <input className="billReceipts"type="file" 
-                    placeholder="Upload bill Reciepts" value={billreceipts} 
+                 <input className="billReceipts"type="file"
+                    placeholder="Upload bill Reciepts" value={billreceipts}
                    onChange={(e) => {
                     setFile (e.target.value);
                 }
                 }
                          ></input></div>
-
-
-
              <div className='loanAmount'>
             <br />
             <select className='name' onChange={handleAmountChange}>
             <option value="Select your Loan amount "> -- Select your Loan amount -- </option>
             {loanAmount.map((amount) => <option value={amount.value}>{amount.label}</option>)}
-            </select> 
-
+            </select>
             {/* <input type="file" onChange={this.onFileChange} />  */}
-            </div> 
+            </div>
        <div className='bottom'>
        <Link path to='/details' ><button className='prev' type='submit' style={{width: "150px", marginBottom: "4px"}} >Back</button></Link>
         <Link path to='/final'> <button className='nex'style={{width: "150px", marginBottom: "4px"}}>Submit</button></Link>
-      
        </div>
         {/* <div className='buttons'>   */}
-        
         {/* </div>   */}
         </label>
         </form>
         </div>
-        </div>     
+        </div>
     );
 }
 export default Details
