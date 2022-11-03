@@ -2,61 +2,54 @@ import React from 'react';
 import './style.css';
 import axios from 'axios'
 import { useState } from 'react';
-import {Link, Navigate} from "react-router-dom";
-
+import {Link} from "react-router-dom";
 const Details = () => {
+// const [customer, setCustomer] = useState("")
  const [location, setLocation] = useState("");
  const [id_number, setId_Number] = useState("");
- const [id_picture, setId_Picture] = useState ("");  
-
-
+ const [upload_id, setFile] = useState()
  const submitting = (event) => {
     event.preventDefault()
-    const user= { location, id_number, id_picture} 
-    console.log("user",user);
-    if (location && id_number && id_picture) {
-      axios.post("http://fierce-hollows-95496.herokuapp.com/api/identification/", user)
+    // setFile(event.target.files[0])
+    const user= { location, id_number, upload_id,}
+    if (location && id_number && upload_id) {
+      axios.post("https://blooming-mountain-74351.herokuapp.com/api/identification/",user)
         .then(res => {
           console.log(res)
-        //   toast("Successful")
-          Navigate("/uploadetails")
-       
         })
         .catch(error => {
           console.log(error)
-        //   toast("try again")
-    
         })
     }
     else {
       console.log(user)
-    //   alert("invalid input")
-
-
-
+      alert("invalid input")
       var myHeaders = new Headers();
       myHeaders.append("Content-Type", "application/json");
       const requestOptions = {
           method: 'POST',
           headers: myHeaders,
           body: JSON.stringify(user),
- 
- 
           redirect: 'Details'
       };
     };
-
- 
      }
      return(
-       
          <div className="details">
               <div className="pic">
          </div>
          <div className='fill'>
           <form onSubmit={submitting}>
                  <label>
-                
+                 {/* <div className="customer">
+                         <input className="container"
+                             type="text"
+                             placeholder="Customer"
+                             value={customer}
+                             onChange={(e) => {
+                                 setCustomer(e.target.value)
+                             }}
+                         ></input></div> */}
                      <div className="location">
                          <input className="container"
                              type="text"
@@ -76,21 +69,16 @@ const Details = () => {
                              }
                              }
                          ></input></div>
-
                   <div className="Upload">
                   <p>Upload ID</p>
-                 <input className="container"
-                   type="file" 
-                    placeholder="ID" 
-                    value={id_picture} 
+                 <input className="container"type="file"
+                    placeholder="ID" value={upload_id}
                    onChange={(e) => {
                     console.log("e",e.target.value);
                     setId_Picture(e.target.value);
                 }
                 }
                          ></input></div>
-                
-                
                  </label>
                  <div className='But'>
                  <Link to="/">
@@ -101,10 +89,7 @@ const Details = () => {
                  </Link>
                  </div>
              </form>
-          
          </div>
-
-
      </div>
      )
 };

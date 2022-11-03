@@ -3,6 +3,9 @@ body {
   background-color: white;
   /* opacity: .5; */
 }
+/* .form-control{
+  border: solid green 2px;
+} */
 .main {
   border: solid 2px white;
   width: 50%;
@@ -15,9 +18,17 @@ body {
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-h2 {
-  align-items: center;
-  margin-top: 6%;
+.form-control{
+  height: 30px;
+  width: 400px;
+  padding-left: 5px;
+  border-color: #6A7DE1;
+  border: none;
+  border: 2px #6A7DE1  solid;
+  border-radius: 10px;
+  margin-top: 4%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .signup {
   color: #6a7de1;
@@ -37,7 +48,12 @@ h2 {
 .password {
   margin-top: 3%;
 }
-
+.form-check-input{
+  color: red;
+}
+form{
+  padding-bottom: 3%;
+}
 .email {
   margin-top: 3%;
 }
@@ -55,6 +71,15 @@ button {
   color: #ffffff;
   font-size: 15px;
 }
+/* height: "35px",
+  marginTop: "5%",
+  width: "315px",
+  backgroundColor: "#6a7de1",
+  height: "37px",
+  border: "none",
+  borderRadius: "50px",
+  color: "#ffffff",  
+  fontSize: "15px" */
 .signUp {
   display: flex;
 }
@@ -65,11 +90,19 @@ button {
   background-color: white;
   /* padding-right: 50%; */
 }
+.continer{
+/* border: green; */
+border:  2px #6a7de1 solid;
+border-radius: 8px;
+width: 510px;
+margin-left: auto;
+margin-right: auto;
+}
 .main-container {
   margin-left: auto;
   margin-right: auto;
   border: solid white 2px;
-  height: 100%;
+  height: 150%;
   width: 600px;
   border-radius: 12px;
   margin-top: 5%;
@@ -79,8 +112,13 @@ button {
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
  
+.form-control {
+  margin-top: 2%;
+}
+.first-control{
+color: red;
 
-
+}
 .names {
     display: flex;
     margin-left: 33px;
@@ -90,8 +128,23 @@ button {
     margin-left: auto;
     margin-right: auto;
   }
-@media only screen and (max-width: 320px) {
+/* @media only screen and (max-width: 320px) {
     #style-switcher {
-      display: none;
+      /* display: none; */
+    /* }
+    .continer{
+      width: fit-content;
+    }
+    .container{
+      width: fit-content;
+    }
+    .main-container{
+   display: none;
+    }
+  } */ 
+  @media screen and (max-width: 200px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
     }
   }

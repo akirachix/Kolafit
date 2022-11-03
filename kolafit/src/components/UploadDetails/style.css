@@ -9,40 +9,28 @@ body {
     border-radius: 15px;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  
 }
-
-
 .bottom{
   display: flex;
   margin-top: 4%;
-  color: #121e5a;
+  color: #121E5A;
  margin-left: 25%;
-
- 
 }
  .nex{
 margin-left: 63%;
 border-radius: 5px;
 }
-
 .prev{
     border-radius: 5px;
     }
-
-
 /* .nex{
- 
   height: 37px;
   border: none;
   color: #FFFFFF;
   font-size: 15px;
   margin-left: 55%;
   width: 200%;
-  
 }   */
-
-
  .name{
   height: 38px;
   width: 500px;
@@ -51,7 +39,7 @@ border-radius: 5px;
   border: none;
   border: 2px #6A7DE1  solid;
   border-radius: 5px;
-} 
+}
 .reciepts{
   height: 30px;
   width: 490px;
@@ -60,8 +48,6 @@ border-radius: 5px;
   border: none;
   border: 2px #6A7DE1  solid;
   border-radius: 5px;
-  
-  
 }
 .RR p{
   color:black;
@@ -69,7 +55,6 @@ border-radius: 5px;
   /* border: solid; */
   width: 45%;
   font-size: 15px;
-
 }
 .billReceipts{
   height: 30px;
@@ -80,14 +65,13 @@ border-radius: 5px;
   border: 2px #6A7DE1  solid;
   border-radius: 5px;
   /* margin-top: -4%; */
-} 
+}
 .bill p{
   color:black;
   margin-left: 4%;
   /* border: solid; */
   width: 45%;
   font-size: 15px;
-
 }
 .rent{
   height: 33px;
@@ -105,6 +89,7 @@ border-radius: 5px;
 /* .rentReciepts{
   margin: 2%;
 } */
+
 
 
 
