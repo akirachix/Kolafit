@@ -13,7 +13,7 @@ const Details = () => {
     // setFile(event.target.files[0])
     const user= { location, id_number, upload_id,}
     if (location && id_number && upload_id) {
-      axios.post("https://blooming-mountain-74351.herokuapp.com/api/identification/",user)
+      axios.post("https://fierce-hollows-95496.herokuapp.com/api/identification/",user)
         .then(res => {
           console.log(res)
         })
