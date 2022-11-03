@@ -25,7 +25,7 @@ return (
       <p>Need to check you loan eigibility? Click <span>{<Link to="/details">
      <div className="click"type='submit'>Here</div></Link>}</span></p>
       <div className="fit">
-             <img src={pick} alt="logo" width="550" height="350"></img>
+             <img src={pick} alt="logo" width="500" height="300"></img>
          </div>
  </div>
  </div>
