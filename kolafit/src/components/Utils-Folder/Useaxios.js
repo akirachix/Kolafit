@@ -4,7 +4,7 @@ import dayjs from "dayjs";
 import { useContext } from "react";
 import AuthContext from "../context/AuthContext";
 
-const baseURL = "https://blooming-mountain-74351.herokuapp.com/api/";
+const baseURL = "https://fierce-hollows-95496.herokuapp.com/api/";
 
 
 const useAxios = () => {

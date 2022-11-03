@@ -1,3 +1,4 @@
+
 import React, {useState,Component} from 'react';
 // import ReactDOM from 'react-dom';
 import "./style.css"
@@ -6,76 +7,44 @@ import "../Kola.png"
 // import kola from "../Kola.png"
 //CLICK RFC TO GENERATE LAYOUT.
 import kolafit from '../image-removebg-preview 1.png';
-function Details(){
-    const bills = [
-        { label: "Water", value:"Water"},
-        { label: "Electricity", value: "Electricity" },
-        // { label: "All", value: "All" }
-    ]
-    // const billRange=[
-    //     {label: "1000-1500", value:"1000-1500"},
-    //     {label: "1000-1500", value:"1000-1500"},
-    //     {label: "1000-1500", value:"1000-1500"},
-    // ]
-    const loanAmount=[
-        {label: "1000-1500", value:"1000-1500"},
-        {label: "1000-1500", value:"1000-1500"},
-        {label: "1000-1500", value:"1000-1500"},
-        {label: "1000-1500", value:"1000-1500"},
-    ]
-    const [bill, setBill] = useState("")
-    const [range, setRange] = useState("")
-    const [amount, setAmount] = useState("")
-    const [rent, setRent] = useState("");
-    const [receipts, setFile2] = useState("");
-    // const [biireceipts,setBillReceipt]=useState("")
-    const [billreceipts, setFile] = useState("")
-    const detailSubmit=(event)=>{
-        event.preventDefault()
-        setFile(event.target.files[0])
-        const details = {bill, range,amount,rent,billreceipts, receipts }
-        var myHeaders = new Headers();
-        myHeaders.append("Content-Type", "application/json");
-        const requestOptions = {
-            method: 'POST',
-            headers: myHeaders,
-            body: JSON.stringify(
-                details
-            ),
-            redirect: 'follow'
-        };
-        fetch("http://127.0.0.1:8000/api/tasks/", requestOptions)
-            .then(response => response.text())
-            .then(result => console.log(result))
-            .catch(error => console.log('error', error));
-    }
-    let handleBillChange= (e) => {
-        setBill(e.target.value)
+import axios from "axios"
+function Details(){ 
+    const [rent_amount, setRent] = useState("");
+    const [rent_receipts, setFile2] = useState(null);
+    const [electricity_receipts, setElectricity] = useState(null) 
+    const [water_receipts, setFile] = useState(null)
+    const [loan_amount, setAmount] = useState("")
+    const detailSubmit = (e) => {
+        e.preventDefault()
+        const user= { rent_amount,  rent_receipts,electricity_receipts,water_receipts,loan_amount}
+        console.log(user);
+        if (rent_amount && rent_receipts && electricity_receipts && water_receipts && loan_amount) {
+          axios.post("https://fierce-hollows-95496.herokuapp.com/api/details/",user)
+            .then(res => {
+              console.log(res)
+            })
+            .catch(error => {
+              console.log(error)
+            })
+        }
+        else {
+          console.log(user)
+          alert("invalid input")
+        }
       }
-    // let handleRangeChange=(e)=>{
-    //     setRange(e.target.value)
-    // }
-    let handleAmountChange=(e)=>{
-        setAmount(e.target.value)
-    }
     return(
         <div className='Details'>
             <div className='logo'>
             <img  className="logo" src= {kolafit} alt='Logo'></img>
             </div>
-            {/* <div className='left'>
-            <div className='moredetails'>
-                <img src= {kola} alt='moredetails'></img>
-            </div>
-            </div> */}
+
         <div className='Front'>
         <form onSubmit={detailSubmit}>
-         <label>
             <div className="rentAmount">
                             <input className="rent"
-                                type="text"
+                                type="number"
                                 placeholder=" Enter rent amount"
-                                value={rent}
+                                value={rent_amount}
                                 onChange={(e) => {
                                     setRent(e.target.value)
                                 }}
@@ -92,43 +61,46 @@ function Details(){
                 <div className="RR">
                   <p> Upload Rent Reciepts</p>
                  <input className="reciepts"type="file"
-                    placeholder="Upload rent Reciepts" value={receipts}
+                    placeholder="Upload rent Reciepts" value={rent_receipts}
+                    accept="image/png, image/jpeg" 
+                    multiple
                    onChange={(e) => {
                     setFile2 (e.target.value);
                 }
                 }
                          ></input></div>
-            <div className='billName'>
-            <br />
-            <select className='name' onChange={handleBillChange}>
-            <option value=" Select the type of Bil you Pay ">Select the type of Bil you Pay</option>
-            {bills.map((bill) => <option value={bill.value}>{bill.label}</option>)}
-             </select>
-             </div>
-                <div className="bill">
-                  <p> Upload bill Reciepts</p>
-                 <input className="billReceipts"type="file"
-                    placeholder="Upload bill Reciepts" value={billreceipts}
+                <div className="billName">
+                  <p> Upload Three Electricity Reciepts</p>
+                 <input className="name"type="file"
+                    placeholder="Upload Electricity Reciepts" value={electricity_receipts} accept="image/png, image/jpeg" 
                    onChange={(e) => {
-                    setFile (e.target.value);
+                    setElectricity (e.target.value);
                 }
                 }
                          ></input></div>
-             <div className='loanAmount'>
-            <br />
-            <select className='name' onChange={handleAmountChange}>
-            <option value="Select your Loan amount "> -- Select your Loan amount -- </option>
-            {loanAmount.map((amount) => <option value={amount.value}>{amount.label}</option>)}
-            </select>
-            {/* <input type="file" onChange={this.onFileChange} />  */}
-            </div>
+                <div className="bill">
+                  <p> Upload Three Water Bill Reciepts</p>
+                 <input className="billReceipts"type="file" accept="image/png, image/jpeg" 
+                    placeholder="Upload Water Bill Reciepts" value={water_receipts}
+                   onChange={(e) => {
+                setFile (e.target.value);
+                }
+                }
+                         ></input></div>
+                <div className="loans">
+                 <input className="loanAmount"type="number"
+                    placeholder="Enter Loan Amount" value={loan_amount}
+                   onChange={(e) => {
+                    setAmount (e.target.value);
+                }
+                }
+                         ></input></div>
        <div className='bottom'>
        <Link path to='/details' ><button className='prev' type='submit' style={{width: "150px", marginBottom: "4px"}} >Back</button></Link>
-        <Link path to='/final'> <button className='nex'style={{width: "150px", marginBottom: "4px"}}>Submit</button></Link>
+        {/* <Link path to='/final'> */}
+             <button className='nex'style={{width: "150px", marginBottom: "4px"}}>Submit</button>
+        {/* </Link> */}
        </div>
-        {/* <div className='buttons'>   */}
-        {/* </div>   */}
-        </label>
         </form>
         </div>
         </div>
