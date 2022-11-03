@@ -74,7 +74,8 @@ const Details = () => {
                  <input className="container"type="file"
                     placeholder="ID" value={upload_id}
                    onChange={(e) => {
-                    setFile (e.target.value);
+                    console.log("e",e.target.value);
+                    setId_Picture(e.target.value);
                 }
                 }
                          ></input></div>
@@ -93,3 +94,9 @@ const Details = () => {
      )
 };
 export default Details;
+
+ 
+
+  
+  
+ 
