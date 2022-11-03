@@ -5,8 +5,6 @@ import { useState } from 'react';
 import {Link, Navigate} from "react-router-dom";
 
 const Details = () => {
- 
-
  const [location, setLocation] = useState("");
  const [id_number, setId_Number] = useState("");
  const [id_picture, setId_Picture] = useState ("");  
