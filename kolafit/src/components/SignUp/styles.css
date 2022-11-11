@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
-body {
+/* body {
   background-color: white;
   /* opacity: .5; */
-}
+/* } */ */
 /* .form-control{
   border: solid green 2px;
 } */
+
 .main {
   border: solid 2px white;
   width: 50%;

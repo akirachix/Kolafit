@@ -69,7 +69,7 @@ function Signup() {
   const submitting = () => {
     const { first_name, last_name, gender, email, password, confirm_password } = user
     if (first_name && last_name && email && gender && password && confirm_password) {
-      axios.post("https://fierce-hollows-95496.herokuapp.com/api/signup/",user)
+      axios.post("https://frozen-mesa-94052.herokuapp.com/api/signup/",user)
         .then(res => {
           console.log(res)
           toast('You have successfully been registered to Kolafit, Login to continue')
