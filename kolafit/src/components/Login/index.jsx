@@ -36,7 +36,7 @@ function Login() {
   const submit = () => {
     const { email, password } = user
     if (email && password) {
-      axios.get("https://fierce-hollows-95496.herokuapp.com/api/login/",user)
+      axios.get("https://frozen-mesa-94052.herokuapp.com/api/login/",user)
         .then(res => {
           console.log(res)
           toast('Welcome to kolafit')

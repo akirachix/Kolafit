@@ -40,7 +40,7 @@ function Details(){
         form_data.append('electricity_receipts',electricity_receipts.replace('C:\\fakepath\\',''));
         form_data.append('water_receipts', water_receipts.replace('C:\\fakepath\\',''));
         form_data.append('loan_amount', loan_amount);
-        axios.post("https://fierce-hollows-95496.herokuapp.com/api/details/", form_data, {
+        axios.post("https://frozen-mesa-94052.herokuapp.com/api/details/", form_data, {
         }).then(res => {
           console.log(res.data);
         }).catch(err => console.log(err))
@@ -61,21 +61,12 @@ function Details(){
                                     setRent(e.target.value)
                                 }}
                             ></input></div>
-                           {/* <div className="rentReciepts">
-                            <input className="reciept"
-                                type="text"
-                                placeholder="Upload Rent Reciepts"
-                                value={receipts}
-                                onChange={(e) => {
-                                    setReceipts(e.target.value)
-                                }}
-                            ></input></div>                  */}
+                         
                 <div className="RR">
-                  <p> Upload Rent Reciepts</p>
+                  {/* <p> Upload Rent Reciepts</p> */}
                  <input className="reciepts"
-                 type="file"
-                    placeholder="Upload rent Reciepts" value={rent_receipts}
-                    accept="image/png, image/jpeg"
+                 type="text"
+                    placeholder="Input electricity bill" value={rent_receipts}
                     multiple
                    onChange={(e) => {
                     // .replace('C:\\fakepath\\','')
@@ -83,19 +74,19 @@ function Details(){
                 }
                 }
                          ></input></div>
-                <div className="billName">
+                {/* <div className="billName">
                   <p> Upload Three Electricity Reciepts</p>
-                 <input className="name"type="file"
+                 <input className="name"type="text"
                     placeholder="Upload Electricity Reciepts" value={electricity_receipts} accept="image/png, image/jpeg"
                    onChange={(e) => {
                     setElectricity (e.target.value);
                 }
                 }
-                         ></input></div>
+                         ></input></div> */}
                 <div className="bill">
-                  <p> Upload Three Water Bill Reciepts</p>
-                 <input className="billReceipts"type="file"  accept="image/png, image/jpeg"
-                    placeholder="Upload Water Bill Reciepts" value={water_receipts}
+                  {/* <p> Upload Three Water Bill Reciepts</p> */}
+                 <input className="billReceipts"type="text"  
+                    placeholder="Input Water Bill" value={water_receipts}
                    onChange={(e) => {
                 setFile (e.target.value);
                 }

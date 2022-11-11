@@ -36,7 +36,7 @@ export const AuthProvider = ({ children }) => {
         }
         console.log(det)
 
-        const response = await fetch( "https://fierce-hollows-95496.herokuapp.com/api/signup/",user, {
+        const response = await fetch( "https://frozen-mesa-94052.herokuapp.com/api/signup/",user, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
