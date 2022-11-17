@@ -4,25 +4,53 @@ body {
 .Details{
   margin-top: 1%;
     margin-left: 20%;
-    padding: 3%;
+    padding: 4%;
     width: 60%;
     border-radius: 15px;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
-.bottom{
+/* .bottom{
   display: flex;
   margin-top: 4%;
   color: #121E5A;
  margin-left: 25%;
+} */
+.Bot{
+  padding-top: 10%;
 }
- .nex{
+
+ /* .nex{
 margin-left: 63%;
 border-radius: 5px;
 }
 .prev{
     border-radius: 5px;
+    } */
+    .Bot{
+      padding-top: 10%;
     }
+      .prev{
+      height: 33px;
+      width: 150px;
+      background-color: #425BDC;
+      border: none;
+      border-radius: 7px;
+      color: #FFFFFF;
+      font-size: 15px;
+      margin-right: 13%;
+      margin-top: 5%;
+      }
+      .nex{
+      height: 33px;
+      width: 150px;
+      background-color: #425BDC;
+      border: none;
+      border-radius:7px;
+      color: #FFFFFF;
+      font-size: 15px;
+      margin-top: 5%;
+       }
 /* .nex{
   height: 37px;
   border: none;
@@ -119,31 +147,56 @@ border-radius: 5px;
 }
 /* .rentReciepts{
   margin: 2%;
-} */body {
+ } */
+
+ @media only screen and (max-width: 320px) {
+  
+body {
   background-color: #CAD8E8;
 }
 .Details{
-  margin-top: 1%;
-    margin-left: 20%;
-    padding: 3%;
-    width: 60%;
+  margin-top: 15%;
+    margin-left: 5%;
+    padding: 4%;
+    width: 85%;
     border-radius: 15px;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
-.bottom{
+/* .bottom{
   display: flex;
   margin-top: 4%;
   color: #121E5A;
  margin-left: 25%;
+} */
+.Bot{
+  padding-top: 15%;
+  font-size: 10px;
 }
- .nex{
-margin-left: 63%;
-border-radius: 5px;
-}
-.prev{
-    border-radius: 5px;
-    }
+  .prev{
+  height: 33px;
+  width: 150px;
+  background-color: #425BDC;
+  border: none;
+  border-radius: 7px;
+  color: #FFFFFF;
+  font-size: 10px;
+  margin-right: 3%;
+  margin-top: 5%;
+  }
+  .nex{
+  height: 33px;
+  width: 150px;
+  background-color: #425BDC;
+  border: none;
+  border-radius:7px;
+  color: #FFFFFF;
+  font-size: 10px;
+  margin-left: -2%;
+  /* padding: %; */
+  /* margin-top: 19%; */
+   }
+
 /* .nex{
   height: 37px;
   border: none;
@@ -152,7 +205,7 @@ border-radius: 5px;
   margin-left: 55%;
   width: 200%;
 }   */
- .name{
+ /* .name{
   height: 38px;
   width: 500px;
   padding-left: 5px;
@@ -160,7 +213,7 @@ border-radius: 5px;
   border: none;
   border: 2px #6A7DE1  solid;
   border-radius: 5px;
-}
+} */
 /* .loans{
   height: 38px;
   width: 500px;
@@ -172,29 +225,29 @@ border-radius: 5px;
 }  */
 .reciepts{
   height: 30px;
-  width: 490px;
+  width: 200px;
   padding-left: 5px;
   border-color: #6A7DE1;
   border: none;
   border: 2px #6A7DE1  solid;
   border-radius: 5px;
 }
-.RR p{
+/* .RR p{
   color:black;
   margin-left: 5%;
-  /* border: solid; */
+  border: solid;
   width: 45%;
   font-size: 15px;
-}
-.billName p{
+} */
+/* .billName p{
   color:black;
   margin-left: 9%;
   width: 45%;
   font-size: 15px;
-}
+} */
 .billReceipts{
   height: 30px;
-  width: 490px;
+  width: 200px;
   padding-left: 5px;
   border-color: #6A7DE1;
   border: none;
@@ -204,7 +257,7 @@ border-radius: 5px;
 }
 .loanAmount{
   height: 30px;
-  width: 490px;
+  width: 200px;
   padding-left: 5px;
   border-color: #6A7DE1;
   border: none;
@@ -224,24 +277,313 @@ border-radius: 5px;
 }
 .rent{
   height: 33px;
-  width: 490px;
+  width: 200px;
   padding-left: 5px;
   border-color: #6A7DE1;
   border: none;
   border: 2px #6A7DE1  solid;
   border-radius: 5px;
 }
-.logo {
-  margin-left: 3%;
-  width: 80px;
+.logo img {
+  margin-left: -3%;
+  width: 40px;
 }
+ }
 /* .rentReciepts{
   margin: 2%;
 } */
 
+@media screen and (max-width: 1043px) {
+  body {
+    background-color: #CAD8E8;
+  }
+  .Details{
+    margin-top: 1%;
+      margin-left: 20%;
+      padding: 4%;
+      width: 60%;
+      border-radius: 15px;
+      background-color: white;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
+  /* .bottom{
+    display: flex;
+    margin-top: 4%;
+    color: #121E5A;
+   margin-left: 25%;
+  } */
+  .Bot{
+    padding-top: 10%;
+  }
+  
+   /* .nex{
+  margin-left: 63%;
+  border-radius: 5px;
+  }
+  .prev{
+      border-radius: 5px;
+      } */
+      .Bot{
+        padding-top: 10%;
+      }
+        .prev{
+        height: 33px;
+        width: 150px;
+        background-color: #425BDC;
+        border: none;
+        border-radius: 7px;
+        color: #FFFFFF;
+        font-size: 15px;
+        margin-right: 2%;
+        margin-top: 5%;
+        }
+        .nex{
+        height: 33px;
+        width: 150px;
+        background-color: #425BDC;
+        border: none;
+        border-radius:7px;
+        color: #FFFFFF;
+        font-size: 15px;
+        margin-top: 5%;
+         }
+  /* .nex{
+    height: 37px;
+    border: none;
+    color: #FFFFFF;
+    font-size: 15px;
+    margin-left: 55%;
+    width: 200%;
+  }   */
+   .name{
+    height: 38px;
+    width: 500px;
+    padding-left: 5px;
+    border-color: #6A7DE1;
+    border: none;
+    border: 2px #6A7DE1  solid;
+    border-radius: 5px;
+  }
+  /* .loans{
+    height: 38px;
+    width: 500px;
+    padding-left: 5px;
+    border-color: #6A7DE1;
+    border: none;
+    border: 2px #6A7DE1  solid;
+    border-radius: 5px;
+  }  */
+  .reciepts{
+    height: 30px;
+    width: 300px;
+    padding-left: 5px;
+    border-color: #6A7DE1;
+    border: none;
+    border: 2px #6A7DE1  solid;
+    border-radius: 5px;
+  }
+  .RR p{
+    color:black;
+    margin-left: 5%;
+    /* border: solid; */
+    width: 45%;
+    font-size: 15px;
+  }
+  .billName p{
+    color:black;
+    margin-left: 9%;
+    width: 45%;
+    font-size: 15px;
+    margin-top: 4%;
+  }
+  .billReceipts{
+    height: 30px;
+    width: 300px;
+    padding-left: 5px;
+    border-color: #6A7DE1;
+    border: none;
+    border: 2px #6A7DE1  solid;
+    border-radius: 5px;
+    /* margin-top: -4%; */
+    margin-top: 4%;
+  }
+  .loanAmount{
+    height: 30px;
+    width: 300px;
+    padding-left: 5px;
+    border-color: #6A7DE1;
+    border: none;
+    border: 2px #6A7DE1  solid;
+    border-radius: 5px;
+    /* margin-top: -4%; */
+  }
+  .loans{
+    margin-top: 3%;
+  }
+  .bill p{
+    color:black;
+    margin-left: 9%;
+    /* border: solid; */
+    width: 45%;
+    font-size: 15px;
+  }
+  .rent{
+    height: 33px;
+    width: 300px;
+    padding-left: 5px;
+    border-color: #6A7DE1;
+    border: none;
+    border: 2px #6A7DE1  solid;
+    border-radius: 5px;
+    margin-bottom: 4%;
+  }
+  .logo {
+    margin-left: 3%;
+    width: 80px;
+  }
+}
 
 
+@media only screen and (max-width: 425px) {
 
+  body {
+    background-color: #CAD8E8;
+  }
+  .Details{
+    margin-top: 15%;
+      margin-left: 5%;
+      padding: 4%;
+      width: 85%;
+      border-radius: 15px;
+      background-color: white;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
+  /* .bottom{
+    display: flex;
+    margin-top: 4%;
+    color: #121E5A;
+   margin-left: 25%;
+  } */
+  .Bot{
+    padding-top: 15%;
+    font-size: 10px;
+  }
+    .prev{
+    height: 33px;
+    width: 100px;
+    background-color: #425BDC;
+    border: none;
+    border-radius: 7px;
+    color: #FFFFFF;
+    font-size: 10px;
+    margin-right: 3%;
+    margin-top: 5%;
+    }
+    .nex{
+    height: 33px;
+    width: 100px;
+    background-color: #425BDC;
+    border: none;
+    border-radius:7px;
+    color: #FFFFFF;
+    font-size: 10px;
+    margin-left: -2%;
+    /* padding: %; */
+    /* margin-top: 19%; */
+     }
+  
+  /* .nex{
+    height: 37px;
+    border: none;
+    color: #FFFFFF;
+    font-size: 15px;
+    margin-left: 55%;
+    width: 200%;
+  }   */
+   /* .name{
+    height: 38px;
+    width: 500px;
+    padding-left: 5px;
+    border-color: #6A7DE1;
+    border: none;
+    border: 2px #6A7DE1  solid;
+    border-radius: 5px;
+  } */
+  /* .loans{
+    height: 38px;
+    width: 500px;
+    padding-left: 5px;
+    border-color: #6A7DE1;
+    border: none;
+    border: 2px #6A7DE1  solid;
+    border-radius: 5px;
+  }  */
+  .reciepts{
+    height: 30px;
+    width: 200px;
+    padding-left: 5px;
+    border-color: #6A7DE1;
+    border: none;
+    border: 2px #6A7DE1  solid;
+    border-radius: 5px;
+  }
+  /* .RR p{
+    color:black;
+    margin-left: 5%;
+    border: solid;
+    width: 45%;
+    font-size: 15px;
+  } */
+  /* .billName p{
+    color:black;
+    margin-left: 9%;
+    width: 45%;
+    font-size: 15px;
+  } */
+  .billReceipts{
+    height: 30px;
+    width: 200px;
+    padding-left: 5px;
+    border-color: #6A7DE1;
+    border: none;
+    border: 2px #6A7DE1  solid;
+    border-radius: 5px;
+    /* margin-top: -4%; */
+  }
+  .loanAmount{
+    height: 30px;
+    width: 200px;
+    padding-left: 5px;
+    border-color: #6A7DE1;
+    border: none;
+    border: 2px #6A7DE1  solid;
+    border-radius: 5px;
+    /* margin-top: -4%; */
+  }
+  .loans{
+    margin-top: 3%;
+  }
+  .bill p{
+    color:black;
+    margin-left: 9%;
+    /* border: solid; */
+    width: 45%;
+    font-size: 15px;
+  }
+  .rent{
+    height: 33px;
+    width: 200px;
+    padding-left: 5px;
+    border-color: #6A7DE1;
+    border: none;
+    border: 2px #6A7DE1  solid;
+    border-radius: 5px;
+  }
+  .logo img {
+    margin-left: -3%;
+    width: 40px;
+  }
+   }
 
 
 

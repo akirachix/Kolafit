@@ -100,12 +100,15 @@ function Details(){
                 }
                 }
                          ></input></div>
-       <div className='bottom'>
-       <Link path to='/details' ><button className='prev' type='submit' style={{width: "150px", marginBottom: "4px"}} >Back</button></Link>
-        <Link path to='/final'>
-             <button className='nex'style={{width: "150px", marginBottom: "4px"}}>Submit</button>
-        </Link>
-       </div>
+       <div className='Bot'>
+                 <Link to="/">
+                 <button className="prev" type='submit' >Back</button>
+                 </Link>
+                 <Link to = "/uploadetails">
+                 <button className="nex" type='submit' >Submit</button>
+                 </Link>
+                 </div>
+ 
         </form>
         </div>
         </div>

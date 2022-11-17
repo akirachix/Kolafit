@@ -65,24 +65,15 @@ function Login() {
     console.log(JSON.stringify(data, null, 2));
   };
   return (
-    <div className='main-container' style={{
-      backgroundColor: "white",
-      width: " 50%",
-      marginLeft: "auto",
-      marginRight: "auto",
-      marginTop: "3%",
-      borderRadius: "12px",
-      border: "solid 2px white",
-      boxShadow: "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px"
-    }}>
+    <div className='main-container' >
       <form onSubmit={handleSubmit(onSubmit)}>
-        <h2 style={{ color: "#6A7DE1", fontWeight: "bold", marginTop: "4%" }}>Login</h2>
+        <h2 >Login</h2>
         <div className="form-group">
 
           <input
             placeholder='Enter your Email'
             className='container'
-            style={{ marginTop: "4%" }}
+          
             name="email"
             type="text"
             {...register('email')}
@@ -98,7 +89,7 @@ function Login() {
           <input
             className='container'
             placeholder='Enter password'
-            style={{ marginTop: "4%" }}
+          
             name="password"
             type="password"
             {...register('password')}
@@ -109,17 +100,13 @@ function Login() {
           <div className="invalid-feedback">{errors.password?.message}</div>
         </div>
         <div>
-          <button type="submit" onClick={submit} className="button" style={{
-            color: "white", backgroundColor: "#6a7de1", border: "2px #6A7DE1  solid", marginLeft: "auto",
-            marginRight: "auto", height: "30px",
-            width: "400px", borderRadius: "10px", marginTop: "4%"
-          }} >
+          <button type="submit" onClick={submit} className="button"  >
             Login
           </button>
         </div>
         <div>
-          <p className="account" style={{ color: "black", marginLeft: "auto", marginRight: "auto" }}>Don't have an account?
-            <span style={{ color: "blue", textDecoration: "none" }}>  <Link to="/signup">Signup</Link>  </span>
+          <p className="account" >Don't have an account?
+            <span>  <Link to="/signup">Signup</Link>  </span>
           </p>
         </div>
       </form>

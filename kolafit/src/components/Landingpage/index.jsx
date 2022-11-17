@@ -4,13 +4,14 @@ import {Link} from "react-router-dom";
 import pic from '../Kolaa.png';
 import photo from '../KolaImage.png';
 
+
 function App() {
 return (
     <>
  <div className="Ab">
  <div className="bar">
     <div className='log'>
-             <img src={pic} alt="logo" width="60" height="60"></img>
+             <img src={pic} alt="logo" width="40" height="40"></img>
              </div>
              <div className='Start'>
          {<Link to="/signup"><p>SignUp</p></Link>}
@@ -19,7 +20,7 @@ return (
  
  </div>
  <div className='Phot'>
-             <img src={photo} alt="logo" width="550" height="300"></img>
+             <img src={photo} alt="" width="450" height="300"></img>
              </div>
 
 
