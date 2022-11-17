@@ -23,9 +23,9 @@ return (
       <h1>KolaFit</h1>
       <h4>We help you improve your credit score.</h4>
       <p>Need to check you loan eigibility? Click <span>{<Link to="/details">
-     <button className="click"type='submit'>Here</button></Link>}</span></p>
-      <div className="loggo">
-             <img src={pick} alt="logo" width="400" height="250"></img>
+     <div className="click"type='submit'>Here</div></Link>}</span></p>
+      <div className="fit">
+             <img src={pick} alt="logo" width="500" height="300"></img>
          </div>
  </div>
  </div>

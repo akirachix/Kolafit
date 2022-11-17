@@ -1,99 +1,138 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
-/* body{
-    background-color: white;
-} */
-.login {
+.Ab{
+    /* margin-top: 10%; */
+    margin-left: 0%;
+    padding: 15%;
+    width: 70%;
+    background-color: rgb(14,34,93);
+    /* border-radius: 10px; */
+    box-shadow: rgba(189, 186, 186, 0.25) 0px 54px 55px, rgba(184, 182, 182, 0.12) 0px -12px 30px, rgba(187, 185, 185, 0.12) 0px 4px 6px, rgba(199, 197, 197, 0.17) 0px 12px 13px, rgba(209, 208, 208, 0.09) 0px -3px 5px;
+   
+ }
+ .bar{
     display: flex;
-    /* margin-top: 25px;
-    margin-left: 70px;
-    width: 90%;
-    border-radius: 20px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+    margin-top: -17%; 
+ }
+
+.log{
+    margin-left: -14%;
+    background-color: white;
+    padding: 1.5%;
+    border-radius: 100px
+    
 }
-.text{
+.Start{
+    margin-left: 110%;
+    border-radius: 5px;
+    margin-top: 1%;
+    font-size: 56px;
+    
 }
-.form {
-    height: 400px;
-    padding: 4%;
+.Phot{
+    margin-top: -23.2%;
     margin-right: 3%;
-    margin-top: 10%;
+    /* width:"400"; 
+    height:"200"; */
 }
-.form,
-.image img{
-        height: 470px;
-        width: 400px;
+
+ .word{
+    margin-top: 2%;
+    margin-right: 3%;
+} 
+
+.word h2{
+    color: rgb(17, 46, 134);
+    font-family: nunito;
+    margin-top: -0.2%;
+   
+} 
+.word p{
+font-family: nunito;
+margin-left: 10%;
+width: 1000px;
+color: rgb(60, 108, 163);
+font-size: 15px;
+} 
+
+
+
+@media only screen and (max-width: 320px) {
+    .Ab{
+        /* margin-top: 10%; */
+        /* margin-left: 0%; */
+        /* padding: 15%; */
+        width: 70%;
+        height: 100px;
+        /* position: fixed; */
+        background-color: rgb(14,34,93);
+        /* border-radius: 10px; */
+        /* box-shadow: rgba(189, 186, 186, 0.25) 0px 54px 55px, rgba(184, 182, 182, 0.12) 0px -12px 30px, rgba(187, 185, 185, 0.12) 0px 4px 6px, rgba(199, 197, 197, 0.17) 0px 12px 13px, rgba(209, 208, 208, 0.09) 0px -3px 5px; */
+       
+     }
+     /* .bar{
+        display: flex;
+        margin-top: -17%; 
+     } */
+    
+    .log img {
+        margin-top: 3%;
+        margin-left: 2%;
+        background-color: white;
+        /* padding:1%; */
+        border-radius: 50px;
+        /* border: solid; */
+        width: 35px;
+        height:30px;
+        
+    }
+    /* .log.width{
+        width: 20px;
+    } */
+    .Start{
+        margin-left: 80%;
+        /* border-radius: 5px; */
+        margin-top: 5%;
+        /* border: solid; */
+        font-size: 10px;
+        
+    }
+    .Phot img{
+        margin-top: -8.4%;
+        margin-right: 3%;
+        /* border: solid; */
+        /* height: 1000px; */
+         width:200px; 
+         height: 100px;
+         
+   
+        
+    }
+    
+     .word{
+        margin-top: 10%;
+        /* margin-right: 3%; */
+    } 
+    
+    .word h2{
+        color: rgb(17, 46, 134);
+        font-family: nunito;
+        margin-top: -0.1%;
+        font-size: 15px;
+        margin-left:10% ;
+       
+    } 
+    .word p{
+    font-family: nunito;
+    margin-left: 12%;
+    width: 240px;
+    /* border: solid; */
+    /* text-align: center; */
+    font-size: 9px;
+    color: rgb(60, 108, 163);
+    
+    } 
+
 }
-h2 {
-    margin-top: 10%;
-    color: #6A7DE1;
-    text-align: center;
-    font-family: Montserrat;
-    font-weight: bolder;
-}
-.checkbox {
-    margin-right: 10%;
-}
-.check {
-    display: flex;
-    font-size: smaller;
-    align-items: center;
-    width: 400px;
-    margin-right: 40%;
-    margin-top: 8%;
-    /* padding-left: 10%; */
-}
-.forgot {
-    margin-left: 40%;
-}
-.account {
-    text-align: center;
-    justify-content: center;
-    margin-top: 3%;
-    font-size: 14px;
-}
-label h5 {
-    width: 10%;
-}
-.container {
-    height: 30px;
-    width: 400px;
-    padding-left: 5px;
-    border-color: #6A7DE1;
-    border: none;
-    border: 2px #6A7DE1  solid;
-    border-radius: 10px;
-}
-.full-container{
-    background-color: white;
-    width: 100%;
-    height: 100%;
-}
-.password {
-    text-align: center;
-    justify-content: center;
-    margin-top: 3%;
-}
-.email {
-    text-align: center;
-    justify-content: center;
-    margin-top: 3%;
-}
-.password h5 {
-    margin-bottom: 0.5%;
-}
-.home-button{
-    color: white;
-    background-color: #6A7DE1 ;
-    border-radius: 10px;
-}
-.sign-text{
-    text-decoration: none;
-    color: white;
-}
-.landing-page-image{
-    border: solid 5px blue;
-    padding: 50%;
-}
+
 
 
 

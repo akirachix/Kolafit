@@ -1,140 +1,117 @@
 import React, {useState,Component} from 'react';
 // import ReactDOM from 'react-dom';
-import "../UploadDetails/style.css" 
+import "./style.css"
 import {Link} from 'react-router-dom'
 import "../Kola.png"
-// import kola from "../Kola.png" 
+// import kola from "../Kola.png"
 //CLICK RFC TO GENERATE LAYOUT.
-import kolafit from './image-removebg-preview 1.png';
+import kolafit from '../image-removebg-preview 1.png';
+import axios from "axios"
 function Details(){
-    const bills = [
-        { label: "Water", value:"Water"},
-        { label: "Electricity", value: "Electricity" },
-        { label: "All", value: "All" }
-    ]
-    const billRange=[
-        {label: "1000-1500", value:"1000-1500"},
-        {label: "1000-1500", value:"1000-1500"},
-        {label: "1000-1500", value:"1000-1500"},
-    ]
-    const loanAmount=[
-        {label: "1000-1500", value:"1000-1500"},
-        {label: "1000-1500", value:"1000-1500"},
-        {label: "1000-1500", value:"1000-1500"},
-        {label: "1000-1500", value:"1000-1500"},
-    ]
-    const [bill, setBill] = useState("")
-    const [range, setRange] = useState("")
-    const [amount, setAmount] = useState("")
-    const [rent, setRent] = useState(""); 
-    const [receipts, setReceipts] = useState("");  
-    const [biireceipts,setBillReceipt]=useState("")
-    
-    
-    const detailSubmit=(event)=>{
-        event.preventDefault()
-        const details = {bills, billRange,loanAmount,rent }
-        var myHeaders = new Headers();
-        myHeaders.append("Content-Type", "application/json");
-        const requestOptions = {
-            method: 'POST',
-            headers: myHeaders,
-            body: JSON.stringify(
-                details
-            ),
-            redirect: 'follow'
-        };
-        fetch("http://127.0.0.1:8000/api/tasks/", requestOptions)
-            .then(response => response.text())
-            .then(result => console.log(result))
-            .catch(error => console.log('error', error));
-    }
-    let handleBillChange= (e) => {
-        setBill(e.target.value)
-      }
-    let handleRangeChange=(e)=>{
-        setRange(e.target.value)
-    }
-    let handleAmountChange=(e)=>{
-        setAmount(e.target.value)
-    }
+    const [rent_amount, setRent] = useState("");
+    const [rent_receipts, setFile2] = useState('');
+    const [electricity_receipts, setElectricity] = useState('')
+    const [water_receipts, setFile] = useState('')
+    const [loan_amount, setAmount] = useState("")
+    // const detailSubmit = (e) => {
+    //     e.preventDefault()
+    //     const user= { rent_amount,  rent_receipts,electricity_receipts,water_receipts,loan_amount}
+    //     console.log(user);
+    //     if (rent_amount && rent_receipts && electricity_receipts && water_receipts && loan_amount) {
+    //       axios.post("https://fierce-hollows-95496.herokuapp.com/api/details/",user)
+    //         .then(res => {
+    //           console.log(res)
+    //         })
+    //         .catch(error => {
+    //           console.log(error)
+    //         })
+    //     }
+    //     else {
+    //       console.log(user)
+    //       alert("invalid input")
+    //     }
+    //   }
+    const detailSubmit = (e)=>{
+        e.preventDefault();
+        console.log("receits",rent_receipts.replace('C:\\fakepath\\',''));
+        let form_data = new FormData();
+        form_data.append('rent_amount', rent_amount);
+        form_data.append('rent_receipts',  rent_receipts.replace('C:\\fakepath\\',''));
+        form_data.append('electricity_receipts',electricity_receipts.replace('C:\\fakepath\\',''));
+        form_data.append('water_receipts', water_receipts.replace('C:\\fakepath\\',''));
+        form_data.append('loan_amount', loan_amount);
+        axios.post("https://frozen-mesa-94052.herokuapp.com/api/details/", form_data, {
+        }).then(res => {
+          console.log(res.data);
+        }).catch(err => console.log(err))
+    };
     return(
-        <div className='DetailsForm'> 
+        <div className='Details'>
             <div className='logo'>
             <img  className="logo" src= {kolafit} alt='Logo'></img>
             </div>
-            {/* <div className='left'>
-    
-            <div className='moredetails'>
-                <img src= {kola} alt='moredetails'></img>
-            </div>
-            </div> */}
         <div className='Front'>
         <form onSubmit={detailSubmit}>
-         <label>
             <div className="rentAmount">
                             <input className="rent"
-                                type="text"
+                                type="number"
                                 placeholder=" Enter rent amount"
-                                value={rent}
+                                value={rent_amount}
                                 onChange={(e) => {
                                     setRent(e.target.value)
                                 }}
-                            ></input></div> 
-
-                            <div className="rentReciepts">
-                            <input className="reciept"
-                                type="text"
-                                placeholder="Upload Rent Reciepts"
-                                value={receipts}
-                                onChange={(e) => {
-                                    setReceipts(e.target.value)
-                                }} 
-                            ></input></div>                
-            <div className='billName'>
-            <br />
-            <select className='name' onChange={handleBillChange}>
-            <option value=" Select the type of Bil you Pay ">Select the type of Bil you Pay</option>
-            {bills.map((bill) => <option value={bill.value}>{bill.label}</option>)}
-             </select>
-             </div>
-             <div className='billRange'>
-            <br />
-            <select className='name' onChange={handleRangeChange}>
-            <option value="Select your bill range "> -- Select your bill range -- </option>
-            {billRange.map((range) => <option value={range.value}>{range.label}</option>)}
-             </select>
-             </div> 
-             <div className="billReceipte">
-                            <input className="billReceipts"
-                                type="text"
-                                placeholder="Upload bill Reciepts"
-                                value={biireceipts}
-                                onChange={(e) => {
-                                    setBillReceipt(e.target.value)
-                                }} 
-                            ></input></div>  
-             <div className='loanAmount'>
-            <br />
-            <select className='name' onChange={handleAmountChange}>
-            <option value="Select your Loan amount "> -- Select your Loan amount -- </option>
-            {loanAmount.map((amount) => <option value={amount.value}>{amount.label}</option>)}
-            </select> 
-
-            {/* <input type="file" onChange={this.onFileChange} />  */}
-            </div> 
-       <div className='bottom-buttons'>
-       <Link path to='/details' ><button className='back' type='submit' style={{width: "150px", marginBottom: "4px"}} >Back</button></Link>
-        <Link path to='/final'> <button className='proceed'>Submit</button></Link>
-      
-       </div>
-        {/* <div className='buttons'>   */}
-        
-        {/* </div>   */}
-        </label>
+                            ></input></div>
+                         
+                <div className="RR">
+                  {/* <p> Upload Rent Reciepts</p> */}
+                 <input className="reciepts"
+                 type="text"
+                    placeholder="Input electricity bill" value={rent_receipts}
+                    multiple
+                   onChange={(e) => {
+                    // .replace('C:\\fakepath\\','')
+                    setFile2 (e.target.value);
+                }
+                }
+                         ></input></div>
+                {/* <div className="billName">
+                  <p> Upload Three Electricity Reciepts</p>
+                 <input className="name"type="text"
+                    placeholder="Upload Electricity Reciepts" value={electricity_receipts} accept="image/png, image/jpeg"
+                   onChange={(e) => {
+                    setElectricity (e.target.value);
+                }
+                }
+                         ></input></div> */}
+                <div className="bill">
+                  {/* <p> Upload Three Water Bill Reciepts</p> */}
+                 <input className="billReceipts"type="text"  
+                    placeholder="Input Water Bill" value={water_receipts}
+                   onChange={(e) => {
+                setFile (e.target.value);
+                }
+                }
+                         ></input></div>
+                <div className="loans">
+                 <input className="loanAmount"type="number"
+                    placeholder="Enter Loan Amount" value={loan_amount}
+                   onChange={(e) => {
+                    setAmount (e.target.value);
+                }
+                }
+                         ></input></div>
+       <div className='Bot'>
+                 <Link to="/">
+                 <button className="prev" type='submit' >Back</button>
+                 </Link>
+                 <Link to = "/uploadetails">
+                 <button className="nex" type='submit' >Submit</button>
+                 </Link>
+                 </div>
+ 
         </form>
         </div>
-        </div>     
+        </div>
     );
 }
 export default Details

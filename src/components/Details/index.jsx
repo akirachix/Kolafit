@@ -1,40 +1,67 @@
 import React from 'react';
 import './style.css';
+import axios from 'axios'
 import { useState } from 'react';
-// import pic from "../Kolaa.png"
-// import './App'
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
+
+
+
 const Details = () => {
+// const [customer, setCustomer] = useState("")
  const [location, setLocation] = useState("");
  const [id_number, setId_Number] = useState("");
- const [upload, setUpload_ID] = useState("");
+ const [upload_id, setId_Picture] = useState()
+ const navigate = useNavigate()
+
+
  const submitting = (event) => {
-     event.preventDefault()
-     const user = {location, id_number, upload, }
-     var myHeaders = new Headers();
-     myHeaders.append("Content-Type", "application/json");
-     const requestOptions = {
-         method: 'POST',
-         headers: myHeaders,
-         body: JSON.stringify(
-             user
-         ),
-         redirect: 'Details'
-     };
+    event.preventDefault()
+    // setFile(event.target.files[0])
+    const user= { location, id_number, upload_id,}
+    console.log("user", user)
+    if (location && id_number && upload_id) {
+      axios.post("https://frozen-mesa-94052.herokuapp.com/api/identification/",user)
+        .then(res => {
+          console.log(res)
+          navigate("/uploadetails")
+        })
+        .catch(error => {
+          console.log(error)
+        })
+    }
+    else {
+      console.log(user)
+      alert("invalid input")
+      var myHeaders = new Headers();
+      myHeaders.append("Content-Type", "multipart/form-data");
+      const requestOptions = {
+          method: 'POST',
+          headers: { "Content-Type": "multipart/form-data" },
+          body: JSON.stringify(user),
+          redirect: 'Details'
+      };
+    };
      }
+    //  const handleImageChange = (e) => {
+    //     let newData = { ...data };
+    //     newData["image_url"] = e.target.files[0];
+    //     setData(newData);
+    // };
+
+
      return(
-       
          <div className="details">
               <div className="pic">
-             {/* <img src={pic} alt="logo" width="60" height="60"></img> */}
          </div>
          <div className='fill'>
-          <form onSubmit={submitting}>
+          <form onSubmit={submitting} enctype="multipart/form-data">
                  <label>
-                     <div className="location">
+                
+                
+                     <div className="Location">
                          <input className="container"
                              type="text"
-                             placeholder="Enter your location"
+                             placeholder="Location"
                              value={location}
                              onChange={(e) => {
                                  setLocation(e.target.value)
@@ -42,39 +69,44 @@ const Details = () => {
                          ></input></div>
                      <div className="Id">
                          <input className="container"
-                             type="text"
-                             placeholder="ID Number"
+                             type="file"
+                             placeholder="Id number"
                              value={id_number}
                              onChange={(e) => {
                                  setId_Number(e.target.value);
                              }
                              }
                          ></input></div>
-                     <div className="Upload">
-                         <h5> </h5>
-                         <input className="container"
-                             type="text"
-                             placeholder="Upload ID"
-                             value={upload}
-                             onChange={(e) => {
-                                 setUpload_ID (e.target.value);
-                             }
-                             }
-                         ></input><br></br></div>
-                
+                  <div className="Upload">
+                  <p>Upload ID</p>
+                 <input className="container"type="text"
+                 name="id_picture"
+                 accept="image/png, image/jpeg"
+                    placeholder="ID" value={upload_id}
+                   onChange={(e) => {
+                    console.log("e",e.target.value);
+                    setId_Picture(e.target.value);
+                }
+                }
+                         ></input></div>
                  </label>
                  <div className='But'>
-                 <Link to="/">
+                 {/* <Link to="/"> */}
                  <button className="previous" type='submit' >Back</button>
-                 </Link>
-                 <Link to = "/uploadetails">
+                 {/* </Link> */}
+                 {/* <Link to = "/uploadetails"> */}
                  <button className="proceed" type='submit' >Proceed</button>
-                 </Link>
+                 {/* </Link> */}
                  </div>
              </form>
-          
-         </div> 
+         </div>
      </div>
      )
 };
 export default Details;
+
+ 
+
+  
+  
+ 

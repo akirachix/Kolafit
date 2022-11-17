@@ -1,11 +1,27 @@
 .confetti-text{
-    color: black;
-    /* border: solid blue 2px; */
+    color: rgb(37, 26, 187);
+    /* border: solid rgb(255, 38, 0) 2px; */
     text-align: center;
 }
 
 h2{
     margin-left: 45%;
-
+    color: rgb(37, 26, 187);
     
 }
+
+@media  only screen and (max-width: 320px){
+    .confetti-text{
+        color: rgb(37, 26, 187);
+        /* border: solid rgb(255, 38, 0) 2px; */
+        text-align: center;
+        font-size: 15px;
+    }
+    
+    .confetti-text .conf{
+        font-size: 15px;
+        color: rgb(37, 26, 187);
+    }
+
+}
+    
