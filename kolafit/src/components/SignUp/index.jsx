@@ -28,8 +28,6 @@ function Signup() {
     email: "",
     password: "",
     confirm_password: "",
-
-
   })
   const handleChange = e =>{
     const {name,value} = e.target
@@ -87,22 +85,14 @@ function Signup() {
   }
  
   return (
-    <div className="main-container" style={{
-      width: " 50%",
-      marginLeft: "auto",
-      marginRight: "auto",
-      marginTop: "3%",
-      borderRadius: "12px",
-      border: "solid 2px white",
-      boxShadow: "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px"
-    }}>
+    <div className="main-container" >
       <h2 style={{ color: "#6A7DE1", fontWeight: "bold", marginTop: "4%" }}>Signup</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="form-group">
 
           <input
             className='container'
-            style={{ marginTop: "4%" }}
+         
             placeholder='Enter first name'
             name="first_name"
             type="text"
@@ -118,7 +108,7 @@ function Signup() {
           <input
             className='container'
             placeholder='Enter Lastname'
-            style={{ marginTop: "4%" }}
+         
             name="last_name"
             type="text"
             {...register('last_name')}
@@ -129,7 +119,7 @@ function Signup() {
           <div className="invalid-feedback">{errors.last_name?.message}</div>
         </div>
 
-       <div style={{marginTop:"4%"}}>
+       <div>
                 <Select className='continer'sty name="gender" placeholder="Select Gender" options={options}
                 {...register("gender")}
                 // onChange={handleChange}
@@ -144,7 +134,7 @@ function Signup() {
           <input
             placeholder='Enter your Email'
             className='container'
-            style={{ marginTop: "4%" }}
+            
             name="email"
             type="text"
             {...register('email')}
@@ -159,7 +149,7 @@ function Signup() {
           <input
             className='container'
             placeholder='Enter password'
-            style={{ marginTop: "4%" }}
+       
             name="password"
             type="password"
             {...register('password')}
@@ -173,7 +163,7 @@ function Signup() {
 
           <input
             className='container'
-            style={{ marginTop: "4%" }}
+      
             placeholder='Confirm password'
             name="confirm_password"
             type="password"
@@ -186,7 +176,7 @@ function Signup() {
           </div>
         </div>
 
-        <div className="form-group form-check" style={{ marginTop: "4%" }}>
+        <div className="form-group form-check" >
           <input
             name="acceptTerms"
             type="checkbox"
@@ -194,24 +184,20 @@ function Signup() {
             onChange={handleChange}
 
           />
-          <label htmlFor="acceptTerms" className="form-check-label">
+          <label htmlFor="acceptTerms" className="formcheck">
             I have read and agree to the Terms
           </label>
           <div className="invalid-feedback">{errors.acceptTerms?.message}</div>
         </div>
         <Link></Link>
         <div>
-          <button type="submit" onClick={submitting} className="button" style={{
-            color: "white", backgroundColor: "#6a7de1", border: "2px #6A7DE1  solid", marginLeft: "auto",
-            marginRight: "auto", height: "30px",
-            width: "400px", borderRadius: "10px", marginTop: "4%"
-          }}>
+          <button type="submit" onClick={submitting} className="button">
             Signup
           </button>
         </div>
         <div>
-          <p className="account" style={{ color: "black", marginLeft: "auto", marginRight: "auto" }}>Already have an account?
-            <Link path to="/login"><span style={{ color: "blue", textDecoration: "none" }}>  <Link to="/login">Login</Link>  </span></Link>
+          <p className="account" >Already have an account?
+            <Link path to="/login"><span >  <Link to="/login">Login</Link>  </span></Link>
           </p>
         </div>
 

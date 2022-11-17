@@ -9,3 +9,19 @@ h2{
     color: rgb(37, 26, 187);
     
 }
+
+@media  only screen and (max-width: 320px){
+    .confetti-text{
+        color: rgb(37, 26, 187);
+        /* border: solid rgb(255, 38, 0) 2px; */
+        text-align: center;
+        font-size: 15px;
+    }
+    
+    .confetti-text .conf{
+        font-size: 15px;
+        color: rgb(37, 26, 187);
+    }
+
+}
+    

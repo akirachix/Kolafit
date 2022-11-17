@@ -1,3 +1,6 @@
+/* @media only screen and (max-width: 320px) {
+  #style-switcher  */
+    
 body{
   /* background-color: #728DD7; */
   background-color: white;
@@ -71,19 +74,16 @@ body{
   margin-top: 5%;
    }
    @media only screen and (max-width: 320px) {
-    #style-switcher {
-      display: none;
-    }
-}body{
-  /* background-color: #728DD7; */
+    
+body{
   background-color: white;
   }
   .details {
     margin-top: 5%;
-    margin-left: 16%;
+    margin-left:6%;
     padding: 4%;
-    width: 58%;
-    border-radius: 15px;
+    width: 78%;
+    border-radius: 10px;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   }
@@ -93,37 +93,44 @@ body{
   .fill{
     margin-top: 6%;
     height: 400px;
+    /* font-size: 10px; */
   }
-  /* .location{
-    margin-top: 3%;
+  /* .Location{
+    margin-top: 5%;
   } */
   .Upload{
     margin-top: 5%;
+
   }
   .Id {
     margin-top: 3%;
+    font-size: 10px;
   }
   .Upload p{
     /* margin-bottom: 0.5%; */
-    margin-right: 56%;
-    margin-top: -3%;
+    margin-right: 64%;
+    margin-top: -2%;
     /* font-family: nunito; */
+    
+    font-size: 10px;
     color: gray;
   }
-  .Front{
-    margin-top: 3%;
-   }
+   .Front{
+    margin-top: 10%;
+   } 
   .container{
-  height: 35px;
-  width: 500px;
+  height: 30px;
+  width: 200px;
   padding-left: 5px;
   border-color: #728DD7 ;
   border: none;
   border: 2px #728DD7 solid;
-  border-radius: 7px;
+  border-radius: 5px;
+  font-size: 10px;
   }
 .But{
   padding-top: 10%;
+  font-size: 10px;
 }
   .previous{
   height: 33px;
@@ -132,8 +139,8 @@ body{
   border: none;
   border-radius: 7px;
   color: #FFFFFF;
-  font-size: 15px;
-  margin-right: 13%;
+  font-size: 10px;
+  margin-right: 4%;
   margin-top: 5%;
   }
   .proceed{
@@ -143,11 +150,177 @@ body{
   border: none;
   border-radius:7px;
   color: #FFFFFF;
-  font-size: 15px;
+  font-size: 10px;
+  margin-right: 4%;
   margin-top: 5%;
    }
-   @media only screen and (max-width: 320px) {
-    #style-switcher {
-      display: none;
+
+  }
+  
+/* } */
+/* @media screen and (max-width: 800px) {
+  .left, .main, .right {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  /* }
+}  */
+
+
+@media screen and (max-width: 1300px) {
+  body{
+    /* background-color: #728DD7; */
+    background-color: white;
     }
+    .details {
+      margin-top: 5%;
+      margin-left: 16%;
+      padding: 3%;
+      width: 58%;
+      border-radius: 15px;
+      background-color: white;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+    .pic{
+      margin-right: 90%;
+    }
+    .fill{
+      margin-top: 6%;
+      height: 400px;
+    }
+    /* .location{
+      margin-top: 3%;
+    } */
+    .Upload{
+      margin-top: 5%;
+    }
+    .Id {
+      margin-top: 3%;
+    }
+    .Upload p{
+      /* margin-bottom: 0.5%; */
+      margin-right: 45%;
+      margin-top: -3%;
+      /* font-family: nunito; */
+      color: gray;
+    }
+    .Front{
+      margin-top: 3%;
+     }
+    .container{
+    height: 35px;
+    width: 300px;
+    padding-left: 5px;
+    border-color: #728DD7 ;
+    border: none;
+    border: 2px #728DD7 solid;
+    border-radius: 7px;
+    }
+  .But{
+    padding-top: 10%;
+  }
+    .previous{
+    height: 33px;
+    width: 150px;
+    background-color: #425BDC;
+    border: none;
+    border-radius: 7px;
+    color: #FFFFFF;
+    font-size: 15px;
+    margin-right: 13%;
+    margin-top: 5%;
+    }
+    .proceed{
+    height: 33px;
+    width: 150px;
+    background-color: #425BDC;
+    border: none;
+    border-radius:7px;
+    color: #FFFFFF;
+    font-size: 15px;
+    margin-top: 5%;
+     }
+  
+}
+
+@media only screen and (max-width: 425px) {
+  body{
+    background-color: white;
+    }
+    .details {
+      margin-top: 5%;
+      margin-left:6%;
+      padding: 4%;
+      width: 78%;
+      border-radius: 10px;
+      background-color: white;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+    .pic{
+      margin-right: 90%;
+    }
+    .fill{
+      margin-top: 6%;
+      height: 400px;
+      /* font-size: 10px; */
+    }
+    /* .Location{
+      margin-top: 5%;
+    } */
+    .Upload{
+      margin-top: 5%;
+  
+    }
+    .Id {
+      margin-top: 3%;
+      font-size: 10px;
+    }
+    .Upload p{
+      /* margin-bottom: 0.5%; */
+      margin-right: 50%;
+      margin-top: -2%;
+      /* font-family: nunito; */
+      
+      font-size: 10px;
+      color: gray;
+    }
+     .Front{
+      margin-top: 10%;
+     } 
+    .container{
+    height: 30px;
+    width: 200px;
+    padding-left: 5px;
+    border-color: #728DD7 ;
+    border: none;
+    border: 2px #728DD7 solid;
+    border-radius: 5px;
+    font-size: 10px;
+    }
+  .But{
+    padding-top: 10%;
+    font-size: 10px;
+  }
+    .previous{
+    height: 33px;
+    width: 100px;
+    background-color: #425BDC;
+    border: none;
+    border-radius: 7px;
+    color: #FFFFFF;
+    font-size: 10px;
+    margin-right: 4%;
+    margin-top: 5%;
+    }
+    .proceed{
+    height: 33px;
+    width: 100px;
+    background-color: #425BDC;
+    border: none;
+    border-radius:7px;
+    color: #FFFFFF;
+    font-size: 10px;
+    margin-right: 1%;
+    margin-top: 5%;
+     }
+  
+    
 }

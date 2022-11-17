@@ -1,12 +1,34 @@
 import { useEffect, useState } from "react";
-// import React {useState,useEffect}from "react";
+import axios from "axios";
 import ReactConfetti from 'react-confetti'
 
+
 function Final (){
+    const [eligibility, setEligibility] = useState({
+        loan_eligibility: "",
+      })
+    const eligible = () => {
+        const { loan_eligibility } = eligibility
+        if (loan_eligibility) {
+          axios.post("https://frozen-mesa-94052.herokuapp.com/api/details/",eligibility)
+            .then(res => {
+              console.log(res)
+            })
+            .catch(error => {
+              console.log(error)
+              toast('Unable to register, to try again')
+            })
+        }
+        else {
+          console.log(user)
+          alert("invalid input")
+        };
+      }
     return(
         <div>
+            
               <div className="confetti-text" style={{backgroundColor:"white", marginRight:"auto",marginLeft:'auto', marginBottom:'auto', marginTop:'20%', width:"400px"}} >
-            <h3 style={{color: "black",marginLeft:5}}> Thank you for trusting and using KolaFit!!. We will review your details and get  back to you </h3> 
+            <h3 className="conf"> Thank you for using KolaFit!!. <br /> We will review your details  <br /> and get  back to you </h3> 
             </div>
             
             <div className="confetti" >

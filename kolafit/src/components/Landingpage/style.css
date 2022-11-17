@@ -17,18 +17,21 @@
     margin-left: -14%;
     background-color: white;
     padding: 1.5%;
-    border-radius: 200px
+    border-radius: 100px
     
 }
 .Start{
     margin-left: 110%;
     border-radius: 5px;
-    margin-top: -1%;
+    margin-top: 1%;
+    font-size: 56px;
     
 }
 .Phot{
-    margin-top: -20.9%;
+    margin-top: -23.2%;
     margin-right: 3%;
+    /* width:"400"; 
+    height:"200"; */
 }
 
  .word{
@@ -39,7 +42,7 @@
 .word h2{
     color: rgb(17, 46, 134);
     font-family: nunito;
-    margin-top: -0.4%;
+    margin-top: -0.2%;
    
 } 
 .word p{
@@ -47,9 +50,92 @@ font-family: nunito;
 margin-left: 10%;
 width: 1000px;
 color: rgb(60, 108, 163);
+font-size: 15px;
 } 
-/* @media only screen and (max-width: 320px) {
-    #style-switcher {
-      display: none;
+
+
+
+@media only screen and (max-width: 320px) {
+    .Ab{
+        /* margin-top: 10%; */
+        /* margin-left: 0%; */
+        /* padding: 15%; */
+        width: 70%;
+        height: 100px;
+        /* position: fixed; */
+        background-color: rgb(14,34,93);
+        /* border-radius: 10px; */
+        /* box-shadow: rgba(189, 186, 186, 0.25) 0px 54px 55px, rgba(184, 182, 182, 0.12) 0px -12px 30px, rgba(187, 185, 185, 0.12) 0px 4px 6px, rgba(199, 197, 197, 0.17) 0px 12px 13px, rgba(209, 208, 208, 0.09) 0px -3px 5px; */
+       
+     }
+     /* .bar{
+        display: flex;
+        margin-top: -17%; 
+     } */
+    
+    .log img {
+        margin-top: 3%;
+        margin-left: 2%;
+        background-color: white;
+        /* padding:1%; */
+        border-radius: 50px;
+        /* border: solid; */
+        width: 35px;
+        height:30px;
+        
     }
-} */
+    /* .log.width{
+        width: 20px;
+    } */
+    .Start{
+        margin-left: 80%;
+        /* border-radius: 5px; */
+        margin-top: 5%;
+        /* border: solid; */
+        font-size: 10px;
+        
+    }
+    .Phot img{
+        margin-top: -8.4%;
+        margin-right: 3%;
+        /* border: solid; */
+        /* height: 1000px; */
+         width:200px; 
+         height: 100px;
+         
+   
+        
+    }
+    
+     .word{
+        margin-top: 10%;
+        /* margin-right: 3%; */
+    } 
+    
+    .word h2{
+        color: rgb(17, 46, 134);
+        font-family: nunito;
+        margin-top: -0.1%;
+        font-size: 15px;
+        margin-left:10% ;
+       
+    } 
+    .word p{
+    font-family: nunito;
+    margin-left: 12%;
+    width: 240px;
+    /* border: solid; */
+    /* text-align: center; */
+    font-size: 9px;
+    color: rgb(60, 108, 163);
+    
+    } 
+
+}
+
+
+
+
+
+
+

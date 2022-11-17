@@ -33,10 +33,10 @@ const Details = () => {
       console.log(user)
       alert("invalid input")
       var myHeaders = new Headers();
-      myHeaders.append("Content-Type", "application/json");
+      myHeaders.append("Content-Type", "multipart/form-data");
       const requestOptions = {
           method: 'POST',
-          headers: myHeaders,
+          headers: { "Content-Type": "multipart/form-data" },
           body: JSON.stringify(user),
           redirect: 'Details'
       };
@@ -54,11 +54,11 @@ const Details = () => {
               <div className="pic">
          </div>
          <div className='fill'>
-          <form onSubmit={submitting}>
+          <form onSubmit={submitting} enctype="multipart/form-data">
                  <label>
                 
                 
-                     <div className="location">
+                     <div className="Location">
                          <input className="container"
                              type="text"
                              placeholder="Location"
@@ -69,7 +69,7 @@ const Details = () => {
                          ></input></div>
                      <div className="Id">
                          <input className="container"
-                             type="text"
+                             type="file"
                              placeholder="Id number"
                              value={id_number}
                              onChange={(e) => {
@@ -91,12 +91,12 @@ const Details = () => {
                          ></input></div>
                  </label>
                  <div className='But'>
-                 <Link to="/">
+                 {/* <Link to="/"> */}
                  <button className="previous" type='submit' >Back</button>
-                 </Link>
-                 <Link to = "/uploadetails">
+                 {/* </Link> */}
+                 {/* <Link to = "/uploadetails"> */}
                  <button className="proceed" type='submit' >Proceed</button>
-                 </Link>
+                 {/* </Link> */}
                  </div>
              </form>
          </div>
