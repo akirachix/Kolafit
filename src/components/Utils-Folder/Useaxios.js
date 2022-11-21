@@ -1,40 +1,41 @@
 import axios from "axios";
-import jwt_decode from "jwt-decode";
-import dayjs from "dayjs";
-import { useContext } from "react";
-import AuthContext from "../context/AuthContext";
+// import jwt_decode from "jwt-decode";
+// import dayjs from "dayjs";
+// import { useContext } from "react";
+// import AuthContext from "../context/AuthContext";
 
 const baseURL = "https://frozen-mesa-94052.herokuapp.com/api/";
 
+export const axiosInstance = axios.create({
+  baseURL,
+  headers: {  'Content-Type': 'application/json'},
 
-const useAxios = () => {
-  const { authTokens, setUser, setAuthTokens } = useContext(AuthContext);
+});
+// const useAxios = () => {
+//   const { authTokens, setUser, setAuthTokens } = useContext(AuthContext);
 
-  const axiosInstance = axios.create({
-    baseURL,
-    headers: { Authorization: `Bearer ${authTokens?.access}` }
-  });
 
-  axiosInstance.interceptors.request.use(async req => {
-    const user = jwt_decode(authTokens.access);
-    const isExpired = dayjs.unix(user.exp).diff(dayjs()) < 1;
 
-    if (!isExpired) return req;
+//   axiosInstance.interceptors.request.use(async req => {
+//     const user = jwt_decode(authTokens.access);
+//     const isExpired = dayjs.unix(user.exp).diff(dayjs()) < 1;
 
-    const response = await axios.post(`${baseURL}/token/refresh/`, {
-      refresh: authTokens.refresh
-    });
+//     if (!isExpired) return req;
 
-    localStorage.setItem("authTokens", JSON.stringify(response.data));
+//     const response = await axios.post(`${baseURL}/token/refresh/`, {
+//       refresh: authTokens.refresh
+//     });
 
-    setAuthTokens(response.data);
-    setUser(jwt_decode(response.data.access));
+//     localStorage.setItem("authTokens", JSON.stringify(response.data));
 
-    req.headers.Authorization = `Bearer ${response.data.access}`;
-    return req;
-  });
+//     setAuthTokens(response.data);
+//     setUser(jwt_decode(response.data.access));
 
-  return axiosInstance;
-};
+//     req.headers.Authorization = `Bearer ${response.data.access}`;
+//     return req;
+//   });
 
-export default useAxios;
+//   return axiosInstance;
+// };
+
+// export default useAxios;
