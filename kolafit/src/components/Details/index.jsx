@@ -10,16 +10,14 @@ const Details = () => {
 // const [customer, setCustomer] = useState("")
  const [location, setLocation] = useState("");
  const [id_number, setId_Number] = useState("");
- const [upload_id, setId_Picture] = useState()
  const navigate = useNavigate()
 
 
  const submitting = (event) => {
     event.preventDefault()
-    // setFile(event.target.files[0])
-    const user= { location, id_number, upload_id,}
+    const user= { location, id_number}
     console.log("user", user)
-    if (location && id_number && upload_id) {
+    if (location && id_number ) {
       axios.post("https://frozen-mesa-94052.herokuapp.com/api/identification/",user)
         .then(res => {
           console.log(res)
@@ -69,7 +67,7 @@ const Details = () => {
                          ></input></div>
                      <div className="Id">
                          <input className="container"
-                             type="file"
+                             type="text"
                              placeholder="Id number"
                              value={id_number}
                              onChange={(e) => {
@@ -77,26 +75,15 @@ const Details = () => {
                              }
                              }
                          ></input></div>
-                  <div className="Upload">
-                  <p>Upload ID</p>
-                 <input className="container"type="text"
-                 name="id_picture"
-                 accept="image/png, image/jpeg"
-                    placeholder="ID" value={upload_id}
-                   onChange={(e) => {
-                    console.log("e",e.target.value);
-                    setId_Picture(e.target.value);
-                }
-                }
-                         ></input></div>
+                
                  </label>
                  <div className='But'>
-                 {/* <Link to="/"> */}
+                 <Link to="/">
                  <button className="previous" type='submit' >Back</button>
-                 {/* </Link> */}
-                 {/* <Link to = "/uploadetails"> */}
-                 <button className="proceed" type='submit' >Proceed</button>
-                 {/* </Link> */}
+                 </Link>
+                 <Link to = "/uploadetails">
+                 <button className="proceed" onClick={submitting} type='submit' >Proceed</button>
+                 </Link>
                  </div>
              </form>
          </div>
@@ -104,9 +91,3 @@ const Details = () => {
      )
 };
 export default Details;
-
- 
-
-  
-  
- 

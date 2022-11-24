@@ -11,23 +11,23 @@ return (
  <div className="Ab">
  <div className="bar">
     <div className='log'>
-             <img src={pic} alt="logo" width="40" height="40"></img>
+             <img src={pic} alt="logo" className='logoPage' width="40" height="40"></img>
              </div>
              <div className='Start'>
-         {<Link to="/signup"><p>SignUp</p></Link>}
+         {<Link to="/signup"><p className='signUp'>SignUp</p></Link>}
      </div>
          </div> 
  
  </div>
  <div className='Phot'>
-             <img src={photo} alt="" width="450" height="300"></img>
+             <img src={photo} alt="" width="450" className='about-image' height="300"></img>
              </div>
 
 
      <div className='word'>
 <div className='first-heading'>
-<h2>About KolaFit</h2>
-<p>KolaFit improves the creditworthiness by aggregating a customer’s data after calculating their loan eligibility <br/>
+<h2 className=''>About KolaFit</h2>
+<p className='first-explanation'>KolaFit improves the creditworthiness by aggregating a customer’s data after calculating their loan eligibility <br/>
 and makes the unified data available to financial  instutitons via an API.</p>
 </div>
 <div className='second-section'>
