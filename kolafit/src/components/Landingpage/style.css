@@ -132,6 +132,49 @@ font-size: 15px;
     } 
 
 }
+@media only screen and (max-width: 600px) {
+ 
+    /* .about-image{
+        display: none;
+    }
+    .signUp.p{
+        font-size: large;
+        padding-right: 50px;
+    }
+   
+   .logoPage{
+    width: 30px;
+    width: 30px;
+    /* width="40"
+     height="40" */
+   /* }
+   .log{
+    width: 35px;
+    height:30px;
+   }
+   .h2{
+    color: white;
+   } */ 
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    /* .loggo2{
+        display: none;
+    }
+    .loggo3{
+        display: none;
+    } */
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
 
 
 
