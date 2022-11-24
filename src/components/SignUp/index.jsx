@@ -13,6 +13,8 @@ import { useState, useEffect } from 'react';
 
 function Signup() {
 
+  
+
 
   const options = [
     { value: 'M', label: 'Male' },
@@ -20,7 +22,7 @@ function Signup() {
     { value: 'O', label: 'Other' },
     
   ]
-
+// const [first_name, setFirstName]= useState
   const [user, setUser] = useState({
     first_name: "",
     last_name: "",
@@ -28,6 +30,9 @@ function Signup() {
     email: "",
     password: "",
     confirm_password: "",
+  })
+  const [name, setName]= useState({
+    first_name:""
   })
   const handleChange = e =>{
     const {name,value} = e.target
